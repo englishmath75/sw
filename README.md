@@ -8,6 +8,9 @@
 | 차시별 실습 | `/sw/step-by-step.html?lesson=1` |
 | 전체체험 | `/sw/first-analysis.html` |
 | Python 핵심 복습 | `/sw/python-review.html` |
+| 수학 함수 그래프 그리기 | `/sw/math-function-graphs.html` |
+| 화면 좌표계·물리 원리 | `/sw/physics-explanation.html` |
+| 그래픽 작품 체험실 | `/sw/graphics-gallery.html` |
 | 실습 자료·복습 문제·보고서 | `/sw/?page=data`, `?page=exam`, `?page=report` |
 | 아두이노·피코 기존 교실 | `/sw/pico.html` |
 
