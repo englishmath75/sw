@@ -1,4 +1,4 @@
-"""Publish the existing classroom at /sw/ without duplicating its source history."""
+"""Publish the existing classroom at sw.englishmath.kr/ without duplicating its source history."""
 import argparse
 import html
 import json
@@ -101,7 +101,16 @@ def package(dist, source_sha):
     (dist / 'site-version.json').write_text(json.dumps({'source_repository': 'englishmath75/pico-lab-classroom', 'source_sha': source_sha}, indent=2))
     # A useful 404, without silently redirecting misspelled lesson paths to the homepage.
     (dist / '404.html').write_text('<!doctype html><html lang="ko"><meta charset="utf-8"><title>페이지를 찾을 수 없습니다</title><h1>페이지를 찾을 수 없습니다</h1><p><a href="/sw/">수업 안내로 돌아가기</a></p></html>')
-    print(f'Packaged {len(original_paths)} files; moved {len(course_paths)} course files to /sw/')
+    # The existing mapping first flattens the course; publish that result at
+    # the custom-domain root, including Vite chunks and runtime-generated URLs.
+    for p in dist.rglob('*'):
+        if p.is_file() and p.suffix in TEXT:
+            text = p.read_text(encoding='utf-8')
+            text = text.replace(ORIGIN + BASE, 'https://sw.englishmath.kr/')
+            text = text.replace(BASE, '/')
+            p.write_text(text, encoding='utf-8')
+    (dist / 'CNAME').write_text('sw.englishmath.kr\n')
+    print(f'Packaged {len(original_paths)} files at https://sw.englishmath.kr/')
 
 
 if __name__ == '__main__':

@@ -35,7 +35,10 @@ class MigrationTests(unittest.TestCase):
                 p = root / path; p.parent.mkdir(parents=True, exist_ok=True); p.write_text(text)
             package(root, 'test-sha')
             self.assertIn('id="root"', (root / 'pico.html').read_text())
-            self.assertIn('/sw/?page=report', (root / 'index.html').read_text())
+            self.assertIn('src="/assets/vite.js"', (root / 'pico.html').read_text())
+            self.assertEqual((root / 'CNAME').read_text().strip(), 'sw.englishmath.kr')
+            self.assertNotIn('/sw/', (root / 'index.html').read_text())
+            self.assertIn('/?page=report', (root / 'index.html').read_text())
             self.assertIn('location.search+location.hash', (root / 'pandas-data-lab/step-by-step.html').read_text())
             for path in ('assets/logo.png', 'assets/vite.js', 'downloads/original.csv', 'downloads/course.csv'):
                 self.assertTrue((root / path).is_file())

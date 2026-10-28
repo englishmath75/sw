@@ -30,7 +30,7 @@ jobs:
         run: |
           source_sha=$(gh api repos/englishmath75/pico-lab-classroom/commits/main --jq .sha)
           echo "source_sha=$source_sha" >> "$GITHUB_OUTPUT"
-          current=$(curl -fsSL --max-time 20 https://englishmath75.github.io/sw/site-version.json | python3 -c 'import sys,json; print(json.load(sys.stdin)["source_sha"])' || true)
+          current=$(curl -fsSL --max-time 20 https://sw.englishmath.kr/site-version.json | python3 -c 'import sys,json; print(json.load(sys.stdin)["source_sha"])' || true)
           if [ "$EVENT_NAME" != schedule ] || [ "$source_sha" != "$current" ]; then
             echo 'changed=true' >> "$GITHUB_OUTPUT"
           else
@@ -64,7 +64,7 @@ jobs:
         working-directory: source
         run: |
           npm ci
-          npm run build
+          npm run build -- --base=/sw/
       - name: Shorten course paths and verify downloads
         env:
           SOURCE_SHA: ${{ needs.check.outputs.source_sha }}

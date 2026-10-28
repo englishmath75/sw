@@ -24,9 +24,10 @@ for page in root.rglob('*.html'):
         if u.scheme or u.netloc or not u.path or u.path.startswith('data:'):
             continue
         if u.path.startswith('/sw/'):
+            errors.append(f'{page.relative_to(root)} retains old base: {link}')
             target = root / unquote(u.path[len('/sw/'):])
         elif u.path.startswith('/'):
-            continue  # Other sites on the same account are outside this deployment.
+            target = root / unquote(u.path.lstrip('/'))
         else:
             target = page.parent / unquote(u.path)
         if target.is_dir():
