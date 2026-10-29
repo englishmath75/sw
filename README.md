@@ -8,6 +8,7 @@
 | 차시별 실습 | `/step-by-step.html?lesson=1` |
 | 전체체험 | `/first-analysis.html` |
 | Python 핵심 복습 | `/python-review.html` |
+| 질문 보충실 · 8비트·색상 | `/questions-supplement.html` |
 | 수학 함수 그래프 그리기 | `/math-function-graphs.html` |
 | 화면 좌표계·물리 원리 | `/physics-explanation.html` |
 | 그래픽 작품 체험실 | `/graphics-gallery.html` |
@@ -26,3 +27,7 @@
 학생 학습 기록을 삭제하거나 다른 서버로 보내지 않습니다.
 
 수정 시 `scripts/package_site.py`의 경로 변환과 `scripts/check_site.py`를 실행해 내부 링크·영상 파일을 확인합니다.
+
+## 보충 교재 업데이트 원칙
+
+기존 정규 수업 본문을 덮어쓰지 않고, 학생의 새로운 질문과 이해를 돕는 서술형 설명을 `/questions-supplement.html`에 누적합니다. 원본 수업 소스 `englishmath75/pico-lab-classroom`을 갱신하면 이 저장소의 게시 워크플로가 최신 내용을 배포합니다.
