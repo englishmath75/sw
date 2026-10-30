@@ -9,6 +9,7 @@
 | 전체체험 | `/first-analysis.html` |
 | Python 핵심 복습 | `/python-review.html` |
 | 질문 보충실 · 8비트·색상 | `/questions-supplement.html` |
+| 리스트·튜플·딕셔너리 비교 실습 | `/list-tuple-dictionary.html` |
 | 수학 함수 그래프 그리기 | `/math-function-graphs.html` |
 | 화면 좌표계·물리 원리 | `/physics-explanation.html` |
 | 그래픽 작품 체험실 | `/graphics-gallery.html` |
