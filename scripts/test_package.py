@@ -26,7 +26,7 @@ class MigrationTests(unittest.TestCase):
                 'index.html': '<html><head></head><div id="root"></div><script src="/sw/assets/vite.js"></script></html>',
                 'assets/vite.js': 'app',
                 'downloads/original.csv': 'original',
-                'pandas-data-lab/index.html': '<html><head></head><a href="./?page=report">report</a></html>',
+                'pandas-data-lab/index.html': '<html><head></head><nav aria-label="수업 메뉴"><a href="./?page=report">report</a></nav><section class="page" id="home"></section></html>',
                 'pandas-data-lab/assets/logo.png': 'logo',
                 'pandas-data-lab/downloads/course.csv': 'course',
                 'pandas-data-lab/step-by-step.html': '<html><a href="./">home</a></html>',
