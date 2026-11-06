@@ -1,0 +1,17 @@
+{
+  "user_message": "승인해 주시겠습니까? ==> 승인함",
+  "scope": "SW 64 fixed activity IDs; preserve MK and existing data",
+  "source_sha": "af113f41e0f209f6f0aedd18596fad6788bd2609",
+  "proposal_git_blob": "0f0592ed44b2a1ce136347ab162972e7cdaa49ef",
+  "baseline_git_blob": "203cbe76a57d74abb7460ab0098430aeac65e958",
+  "fresh_read_at": "2026-11-06T16:58:19.756Z",
+  "baseline_exact_match": true,
+  "applied": true,
+  "applied_verified_at": "2026-11-06T16:59:36.983Z",
+  "applied_active_label": "2026-11-07 01:58 KST",
+  "published_exact_proposal": true,
+  "baseline_sha256": "707b90cfdef2e7604aeb2ea43aa81efc23fc02badd801e3fbebb966eb9806687",
+  "applied_sha256": "81db0ec12e9bba91504f847af089b92656ba5c21216787459198ecb66f6eee1e",
+  "data_mutations": false,
+  "mk_sections_unchanged": true
+}

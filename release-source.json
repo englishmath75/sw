@@ -3,8 +3,10 @@
   "source_sha": "af113f41e0f209f6f0aedd18596fad6788bd2609",
   "mode": "integrated",
   "validation_run": 42252447686,
-  "rules_approved": false,
-  "rules_approval_status": "WAITING_FOR_EXPLICIT_USER_APPROVAL",
+  "rules_approved": true,
+  "rules_approval_status": "APPROVED_BY_USER_AND_APPLIED",
   "baseline_source_sha": "c38e7ce5e057b68898d086dde1caaaceae4f6d00",
-  "baseline_publisher_sha": "17162105ba32ac5075017115901800cb298068a0"
+  "baseline_publisher_sha": "17162105ba32ac5075017115901800cb298068a0",
+  "rules_approval_record": "release-approval-20261107.json",
+  "rules_sha256": "81db0ec12e9bba91504f847af089b92656ba5c21216787459198ecb66f6eee1e"
 }
