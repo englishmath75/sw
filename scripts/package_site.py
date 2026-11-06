@@ -98,9 +98,11 @@ def package(dist, source_sha):
     text = text.replace('<head>', '<head>' + router, 1)
     integrated = 'data-sw-integrated="2"' in text
     if integrated:
-        for expected in ('data-route="data-lab"', '새 파이썬 교실 체험 ↗', '외부 사이트 · SW 학습 기록과 별도'):
+        for expected in ('data-route="data-lab"', '데이터 시각화 실험실'):
             if expected not in text:
                 raise ValueError('Integrated menu missing: ' + expected)
+        if 'englishmath-python.vercel.app' in text or 'sw-external' in text:
+            raise ValueError('Integrated menu must not include the retired external classroom link')
     else:
         # Add an independent, anonymous lab without changing school authentication or records.
         lab_url = 'https://englishmath-python.vercel.app/data-lab'

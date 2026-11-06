@@ -39,8 +39,13 @@ def verify_avatar(text):
         raise ValueError('Extra activity must precede the numbered lessons')
     if 'brand-mk-aligned' not in sidebar or LABEL not in sidebar:
         raise ValueError('Avatar must reuse the current classroom identity')
-    if 'https://englishmath-python.vercel.app/data-lab' not in sidebar:
-        raise ValueError('Current data-lab shortcut is missing')
+    if 'data-sw-integrated="2"' in text:
+        if 'data-route="data-lab"' not in sidebar:
+            raise ValueError('Internal data-lab shortcut is missing')
+        if 'englishmath-python.vercel.app' in sidebar or 'sw-external' in sidebar:
+            raise ValueError('Retired external classroom link remains')
+    elif 'https://englishmath-python.vercel.app/data-lab' not in sidebar:
+        raise ValueError('Preserved baseline data-lab shortcut is missing')
 
 
 def finalize(dist, source_sha):
