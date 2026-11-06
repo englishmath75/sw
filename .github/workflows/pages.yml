@@ -71,6 +71,7 @@ jobs:
         run: |
           python3 publisher/scripts/test_package.py
           python3 publisher/scripts/package_site.py source/dist --source-sha "$SOURCE_SHA"
+          python3 publisher/scripts/finalize_brand.py --dist source/dist --source-sha "$SOURCE_SHA"
           python3 publisher/scripts/check_site.py source/dist
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
@@ -78,7 +79,7 @@ jobs:
           path: source/dist
 
   deploy:
-    needs: build
+    needs: [check, build]
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -86,3 +87,33 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify published SW label and desktop font
+        env:
+          SOURCE_SHA: ${{ needs.check.outputs.source_sha }}
+        run: |
+          set -o pipefail
+          mkdir -p verification
+          python3 scripts/finalize_brand.py --live --source-sha "$SOURCE_SHA" | tee verification/public-check.txt
+      - name: Capture public desktop pages at 100 percent
+        continue-on-error: true
+        timeout-minutes: 3
+        env:
+          SOURCE_SHA: ${{ needs.check.outputs.source_sha }}
+        run: |
+          CHROME=$(command -v google-chrome || command -v chromium || true)
+          if [ -z "$CHROME" ]; then
+            echo 'Browser capture unavailable; HTTP verification remains authoritative.'
+            exit 0
+          fi
+          timeout 60s "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1000 --force-device-scale-factor=1 --virtual-time-budget=8000 --user-data-dir="$RUNNER_TEMP/sw-home-check" --screenshot="$PWD/verification/sw-home-desktop.png" "https://sw.englishmath.kr/?verify=$SOURCE_SHA"
+          timeout 60s "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1000 --force-device-scale-factor=1 --virtual-time-budget=8000 --user-data-dir="$RUNNER_TEMP/sw-lesson-check" --screenshot="$PWD/verification/sw-lesson-desktop.png" "https://sw.englishmath.kr/step-by-step.html?lesson=1&verify=$SOURCE_SHA"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sw-brand-public-verification
+          path: verification/
+          retention-days: 7
+          if-no-files-found: warn
