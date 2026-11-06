@@ -56,8 +56,22 @@ jobs:
           python3 publisher/scripts/finalize_brand.py --dist source/dist --source-sha "$SOURCE_SHA"
           python3 publisher/scripts/check_site.py source/dist
           node publisher/scripts/stamp-release.mjs source/dist
+      - name: Prepare route browser
+        working-directory: source
+        run: npx playwright install --with-deps chromium
+      - name: Every legacy route and download
+        working-directory: source
+        env:
+          SW_SOURCE_SHA: ${{ steps.pin.outputs.sha }}
+        run: node ../publisher/scripts/extra-browser-check.mjs
       - uses: actions/upload-artifact@v4
         with:
           name: sw-reviewed-publisher-candidate
           path: source/dist
+          retention-days: 14
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sw-publisher-route-evidence
+          path: source/sw/evidence/
           retention-days: 14
