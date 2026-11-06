@@ -126,6 +126,8 @@ def package(dist, source_sha):
             text = p.read_text(encoding='utf-8')
             text = text.replace(ORIGIN + BASE, 'https://sw.englishmath.kr/')
             text = text.replace(BASE, '/')
+            if integrated and p.suffix == '.html':
+                text = text.replace('CSV 내용 (편집 가능, 브라우저에만 보관)', 'CSV 내용 (교재 가상 자료는 계정 저장 · 직접 선택한 파일은 현재 탭에서만 사용)')
             p.write_text(text, encoding='utf-8')
     (dist / 'CNAME').write_text('sw.englishmath.kr\n')
     print(f'Packaged {len(original_paths)} files at https://sw.englishmath.kr/')
