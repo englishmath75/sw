@@ -4,7 +4,7 @@ const release=JSON.parse(await readFile('release-source.json','utf8'));
 if(release.repository!=='englishmath75/pico-lab-classroom'||!/^[a-f0-9]{40}$/.test(release.source_sha))throw Error('Explicit SW source pin required');
 if(!['integrated','baseline'].includes(release.mode)||release.rules_approved!==true)throw Error('Release approval record is missing');
 const run=JSON.parse(execFileSync('gh',['api','repos/'+release.repository+'/actions/runs/'+release.validation_run],{encoding:'utf8'}));
-if(run.conclusion!=='success'||run.head_branch!=='work/sw-v2-unified-20261106')throw Error('Pinned source lacks successful SW validation');
+if(run.path!=='.github/workflows/sw-v2-validation.yml'||run.conclusion!=='success'||run.head_branch!=='work/sw-v2-unified-20261106')throw Error('Pinned source lacks successful SW validation');
 if(release.mode==='integrated'&&run.head_sha!==release.source_sha)throw Error('Validation SHA differs from source pin');
 if(release.mode==='baseline'){
  if(release.source_sha!=='c38e7ce5e057b68898d086dde1caaaceae4f6d00'||release.baseline_publisher_sha!=='17162105ba32ac5075017115901800cb298068a0'||run.head_sha!==release.baseline_validation_source_sha)throw Error('Unknown rollback pair');

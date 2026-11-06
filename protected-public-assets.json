@@ -1,0 +1,68 @@
+{
+  "at": "2026-11-06T16:17:20.063Z",
+  "operation": "anonymous public read only",
+  "sites": [
+    {
+      "origin": "https://mk.englishmath.kr",
+      "assets": [
+        {
+          "url": "https://mk.englishmath.kr/app.js",
+          "sha256": "5cc755b622dfddf1bda8cac0fd165398a2e848437bd5b343955834aadb0c7643"
+        },
+        {
+          "url": "https://mk.englishmath.kr/mk.css",
+          "sha256": "473cd18329ee31c411b9bf4b1e34c67666b8ccdaaa16984e7ba2f47c20631599"
+        },
+        {
+          "url": "https://mk.englishmath.kr/reverse-compare.css",
+          "sha256": "583ab11ebe595b2ec118a67d4bc3177bd6e829a52d00fc8d4f5f373860e193c7"
+        }
+      ]
+    },
+    {
+      "origin": "https://englishmath-python.vercel.app",
+      "assets": [
+        {
+          "url": "https://englishmath-python.vercel.app/_next/static/chunks/437-b6d1f6430d560c68.js",
+          "sha256": "7e68e39846fcd786591b1b9cb895b49242082fd1ccbe652af5e2ad00857cb179"
+        },
+        {
+          "url": "https://englishmath-python.vercel.app/_next/static/chunks/4bd1b696-cd566323a07c169f.js",
+          "sha256": "7d5ccf185a6f85ab38ce400a7f10aa0a3496eb4e9aee1e500a85e01c4222fcec"
+        },
+        {
+          "url": "https://englishmath-python.vercel.app/_next/static/chunks/500-863cc2266cad9a2f.js",
+          "sha256": "905bc34977bb55dd8fda0041a3dbe144347dc46e9cd747d71e6b326deb234d7d"
+        },
+        {
+          "url": "https://englishmath-python.vercel.app/_next/static/chunks/794-751e2000aa736546.js",
+          "sha256": "c000c70cb66955391388c9b42b6d76fcb4d07c3d0ea63b8112bc35783ec76762"
+        },
+        {
+          "url": "https://englishmath-python.vercel.app/_next/static/chunks/app/layout-92e189b2310abf42.js",
+          "sha256": "7c2c00c870c7d6ca5f847584f2f46380ad9d6f333a8bee71570a8c56390d08b6"
+        },
+        {
+          "url": "https://englishmath-python.vercel.app/_next/static/chunks/app/page-7a51e6710fd1b98c.js",
+          "sha256": "a711788a24f3af5d1bec851ff3307eada438f41c057b9e772968bccea875e5ba"
+        },
+        {
+          "url": "https://englishmath-python.vercel.app/_next/static/chunks/main-app-61aba704543c578a.js",
+          "sha256": "fb0b3f31ecff19e0d3f9f90e4562cd26c0707f0832022468cd07093619bc6bd5"
+        },
+        {
+          "url": "https://englishmath-python.vercel.app/_next/static/chunks/polyfills-42372ed130431b0a.js",
+          "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683"
+        },
+        {
+          "url": "https://englishmath-python.vercel.app/_next/static/chunks/webpack-594a734f3808ed4e.js",
+          "sha256": "a95115e1f5ab2a21a43ec2d77fb4b06dcd8fd2811fa06e011c3a3c4e2d0f6e30"
+        },
+        {
+          "url": "https://englishmath-python.vercel.app/_next/static/css/b88600313a45b0c6.css",
+          "sha256": "b2afe53a6f6b4dd6e4f8881e15cb270a87fd427a05320a208caa8bafa7df43f8"
+        }
+      ]
+    }
+  ]
+}
