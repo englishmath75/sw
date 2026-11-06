@@ -77,20 +77,25 @@ jobs:
         with:
           path: source/dist
   deploy:
+    timeout-minutes: 30
     needs: [check,build]
     runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          timeout: '1200000'
       - uses: actions/checkout@v4
         with:
           path: publisher
           persist-credentials: false
+      - name: Test bounded Pages queue handling
+        run: node publisher/scripts/test-deploy-pages-queue.cjs
+      - id: deployment
+        name: Publish pinned artifact and await Pages completion
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b
+        with:
+          script: |
+            await require('./publisher/scripts/deploy-pages-queue.cjs')({github,context,core});
       - uses: actions/checkout@v4
         with:
           repository: englishmath75/pico-lab-classroom

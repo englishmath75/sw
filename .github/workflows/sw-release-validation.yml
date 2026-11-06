@@ -42,6 +42,8 @@ jobs:
           ref: ${{ steps.pin.outputs.sha }}
           path: source
           persist-credentials: false
+      - name: Test bounded Pages queue handling
+        run: node publisher/scripts/test-deploy-pages-queue.cjs
       - name: Build exact candidate
         working-directory: source
         env:
