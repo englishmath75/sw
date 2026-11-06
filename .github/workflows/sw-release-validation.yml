@@ -1,0 +1,63 @@
+name: SW pinned publisher validation
+on:
+  push:
+    branches: [work/sw-v2-pinned-release-20261106]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: publisher
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - id: pin
+        working-directory: publisher
+        run: node -e "const p=require('./release-source.json'); require('fs').appendFileSync(process.env.GITHUB_OUTPUT, 'sha='+p.source_sha+'\\n')"
+      - name: Unapproved release is blocked
+        working-directory: publisher
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if node -e "process.exit(require('./release-source.json').rules_approved ? 0 : 1)"; then
+            node scripts/check-release.mjs
+          else
+            if node scripts/check-release.mjs > release-gate.log 2>&1; then exit 1; fi
+            grep -q 'Release approval record is missing' release-gate.log
+          fi
+      - uses: actions/checkout@v4
+        with:
+          repository: englishmath75/pico-lab-classroom
+          ref: ${{ steps.pin.outputs.sha }}
+          path: source
+          persist-credentials: false
+      - name: Build exact candidate
+        working-directory: source
+        env:
+          SW_SOURCE_SHA: ${{ steps.pin.outputs.sha }}
+        run: |
+          npm ci
+          npm ci --prefix sw
+          npm run build:sw
+      - name: Validate actual publisher scripts
+        env:
+          SOURCE_SHA: ${{ steps.pin.outputs.sha }}
+          PUBLISHER_SHA: ${{ github.sha }}
+        run: |
+          python3 publisher/scripts/test_package.py
+          python3 publisher/scripts/package_site.py source/dist --source-sha "$SOURCE_SHA"
+          python3 publisher/scripts/finalize_brand.py --dist source/dist --source-sha "$SOURCE_SHA"
+          python3 publisher/scripts/check_site.py source/dist
+          node publisher/scripts/stamp-release.mjs source/dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sw-reviewed-publisher-candidate
+          path: source/dist
+          retention-days: 14

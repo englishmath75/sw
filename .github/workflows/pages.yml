@@ -1,86 +1,84 @@
 name: SW classroom publish
-
 on:
   push:
     branches: [main]
   workflow_dispatch:
   schedule:
     - cron: '7,22,37,52 * * * *'
-
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
-
 concurrency:
   group: sw-pages
   cancel-in-progress: false
-
 jobs:
   check:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
-      changed: ${{ steps.check.outputs.changed }}
-      source_sha: ${{ steps.check.outputs.source_sha }}
+      changed: ${{ steps.pin.outputs.changed }}
+      source_sha: ${{ steps.pin.outputs.source_sha }}
     steps:
-      - id: check
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - id: pin
         env:
           GH_TOKEN: ${{ github.token }}
           EVENT_NAME: ${{ github.event_name }}
-        run: |
-          source_sha=$(gh api repos/englishmath75/pico-lab-classroom/commits/main --jq .sha)
-          echo "source_sha=$source_sha" >> "$GITHUB_OUTPUT"
-          current=$(curl -fsSL --max-time 20 https://sw.englishmath.kr/site-version.json | python3 -c 'import sys,json; print(json.load(sys.stdin)["source_sha"])' || true)
-          if [ "$EVENT_NAME" != schedule ] || [ "$source_sha" != "$current" ]; then
-            echo 'changed=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'changed=false' >> "$GITHUB_OUTPUT"
-          fi
-
+        run: node scripts/check-release.mjs
   build:
     needs: check
     if: needs.check.outputs.changed == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
           path: publisher
+          persist-credentials: false
       - uses: actions/checkout@v4
         with:
           repository: englishmath75/pico-lab-classroom
           ref: ${{ needs.check.outputs.source_sha }}
           path: source
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
           cache-dependency-path: source/package-lock.json
-      - name: Prepare existing student materials
+      - name: Build pinned SW source
         working-directory: source
-        run: |
-          mkdir -p public/downloads
-          base64 --decode public/downloads/arduino-foundations.docx.b64 > public/downloads/arduino-foundations.docx
-      - name: Build existing classroom for sw
-        working-directory: source
+        env:
+          SW_SOURCE_SHA: ${{ needs.check.outputs.source_sha }}
         run: |
           npm ci
-          npm run build -- --base=/sw/
-      - name: Shorten course paths and verify downloads
+          mkdir -p public/downloads
+          base64 --decode public/downloads/arduino-foundations.docx.b64 > public/downloads/arduino-foundations.docx
+          if node -e "process.exit(require('./package.json').scripts['build:sw'] ? 0 : 1)"; then
+            npm ci --prefix sw
+            npm run build:sw
+          else
+            npm run build -- --base=/sw/
+          fi
+      - name: Existing publication contracts
         env:
           SOURCE_SHA: ${{ needs.check.outputs.source_sha }}
+          PUBLISHER_SHA: ${{ github.sha }}
         run: |
           python3 publisher/scripts/test_package.py
           python3 publisher/scripts/package_site.py source/dist --source-sha "$SOURCE_SHA"
           python3 publisher/scripts/finalize_brand.py --dist source/dist --source-sha "$SOURCE_SHA"
           python3 publisher/scripts/check_site.py source/dist
+          node publisher/scripts/stamp-release.mjs source/dist
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
           path: source/dist
-
   deploy:
-    needs: [check, build]
-    runs-on: ubuntu-latest
+    needs: [check,build]
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -89,51 +87,44 @@ jobs:
         uses: actions/deploy-pages@v4
       - uses: actions/checkout@v4
         with:
+          path: publisher
           persist-credentials: false
-      - name: Verify published SW label and desktop font
+      - uses: actions/checkout@v4
+        with:
+          repository: englishmath75/pico-lab-classroom
+          ref: ${{ needs.check.outputs.source_sha }}
+          path: source
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: source/package-lock.json
+      - name: Compare protected sites public assets
+        env:
+          PROTECTED_BASELINE: publisher/protected-public-assets.json
+          VERIFICATION_DIR: verification
+        run: node publisher/scripts/protected-sites.mjs
+      - name: Verify public version and course identity
         env:
           SOURCE_SHA: ${{ needs.check.outputs.source_sha }}
         run: |
-          set -o pipefail
           mkdir -p verification
-          python3 scripts/finalize_brand.py --live --source-sha "$SOURCE_SHA" | tee verification/public-check.txt
-      - name: Prepare Korean screenshot fonts
-        continue-on-error: true
-        timeout-minutes: 3
+          python3 publisher/scripts/finalize_brand.py --live --source-sha "$SOURCE_SHA" > verification/public-check.json
+      - name: Prepare public browser verification
+        working-directory: source
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq fonts-noto-cjk
-      - name: Capture public desktop and avatar pages at 100 percent
-        continue-on-error: true
-        timeout-minutes: 5
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Verify deployed internal Python and avatar
+        working-directory: source
         env:
           SOURCE_SHA: ${{ needs.check.outputs.source_sha }}
-        run: |
-          CHROME=$(command -v google-chrome || command -v chromium || true)
-          if [ -z "$CHROME" ]; then
-            echo 'Browser capture unavailable; HTTP verification remains authoritative.'
-            exit 0
-          fi
-          timeout 60s "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1000 --force-device-scale-factor=1 --virtual-time-budget=8000 --user-data-dir="$RUNNER_TEMP/sw-home-check" --screenshot="$PWD/verification/sw-home-desktop.png" "https://sw.englishmath.kr/?verify=$SOURCE_SHA"
-          timeout 60s "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1000 --force-device-scale-factor=1 --virtual-time-budget=8000 --user-data-dir="$RUNNER_TEMP/sw-lesson-check" --screenshot="$PWD/verification/sw-lesson-desktop.png" "https://sw.englishmath.kr/step-by-step.html?lesson=1&verify=$SOURCE_SHA"
-          timeout 60s "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1000 --force-device-scale-factor=1 --virtual-time-budget=8000 --user-data-dir="$RUNNER_TEMP/sw-avatar-check" --screenshot="$PWD/verification/sw-avatar-desktop.png" --dump-dom "https://sw.englishmath.kr/ai-avatar.html?verify=$SOURCE_SHA" > verification/sw-avatar-rendered.html
-          timeout 60s "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=600,1000 --force-device-scale-factor=1 --virtual-time-budget=8000 --user-data-dir="$RUNNER_TEMP/sw-avatar-responsive" --screenshot="$PWD/verification/sw-avatar-responsive.png" "https://sw.englishmath.kr/ai-avatar.html?verify=$SOURCE_SHA"
-          python3 - <<'PY'
-          import json, re
-          from pathlib import Path
-          from scripts.finalize_brand import verify_avatar
-          text = Path('verification/sw-avatar-rendered.html').read_text()
-          verify_avatar(text)
-          count = len(re.findall(r'<button\b[^>]*class="[^"]*animal-option', text))
-          assert count == 8, f'Expected 8 rendered animal buttons, got {count}'
-          result = {'result': 'PASS', 'rendered_animal_buttons': count, 'pink_sidebar': True, 'camera_started_by_test': False, 'physical_camera_test': 'NOT_RUN'}
-          Path('verification/avatar-render-check.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
-          print(json.dumps(result))
-          PY
+          VERIFICATION_DIR: ../verification
+        run: node ../publisher/scripts/verify-live.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: sw-brand-public-verification
+          name: sw-production-verification
           path: verification/
-          retention-days: 7
-          if-no-files-found: warn
+          retention-days: 30

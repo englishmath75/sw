@@ -96,18 +96,24 @@ def package(dist, source_sha):
     text = root.read_text()
     router = '<script>if(new URLSearchParams(location.search).has("view")){location.replace("/sw/pico.html"+location.search+location.hash);}</script>'
     text = text.replace('<head>', '<head>' + router, 1)
-    # Add an independent, anonymous lab without changing school authentication or records.
-    lab_url = 'https://englishmath-python.vercel.app/data-lab'
-    lab_link = ('<a class="nav" href="' + lab_url + '" target="_blank" rel="noopener noreferrer">'
-                '새 데이터 분석 시각화 실험실 ↗</a>')
-    lab_notice = ('<p class="notice">새 시각화 실험실은 로그인 없이 체험하는 별도 기능입니다. '
-                  '코드는 이 브라우저에 임시 저장되며, 기존 Google 로그인·Firebase 클라우드 저장 및 학생 학습 기록과 연결되지 않습니다. '
-                  '공용 PC에서는 사용 후 저장본을 지우고 필요한 코드는 파일로 내려받으세요.</p>')
-    nav_start = '<nav aria-label="수업 메뉴">'
-    if nav_start not in text:
-        raise ValueError('Expected course navigation is missing; preserve existing homepage')
-    text = text.replace(nav_start, nav_start + lab_link, 1)
-    text = text.replace('<section class="page" id="home">', '<section class="page" id="home">' + lab_notice, 1)
+    integrated = 'data-sw-integrated="2"' in text
+    if integrated:
+        for expected in ('data-route="data-lab"', '새 파이썬 교실 체험 ↗', '외부 사이트 · SW 학습 기록과 별도'):
+            if expected not in text:
+                raise ValueError('Integrated menu missing: ' + expected)
+    else:
+        # Add an independent, anonymous lab without changing school authentication or records.
+        lab_url = 'https://englishmath-python.vercel.app/data-lab'
+        lab_link = ('<a class="nav" href="' + lab_url + '" target="_blank" rel="noopener noreferrer">'
+                    '새 데이터 분석 시각화 실험실 ↗</a>')
+        lab_notice = ('<p class="notice">새 시각화 실험실은 로그인 없이 체험하는 별도 기능입니다. '
+                      '코드는 이 브라우저에 임시 저장되며, 기존 Google 로그인·Firebase 클라우드 저장 및 학생 학습 기록과 연결되지 않습니다. '
+                      '공용 PC에서는 사용 후 저장본을 지우고 필요한 코드는 파일로 내려받으세요.</p>')
+        nav_start = '<nav aria-label="수업 메뉴">'
+        if nav_start not in text:
+            raise ValueError('Expected course navigation is missing; preserve existing homepage')
+        text = text.replace(nav_start, nav_start + lab_link, 1)
+        text = text.replace('<section class="page" id="home">', '<section class="page" id="home">' + lab_notice, 1)
     root.write_text(text)
     (dist / '.nojekyll').touch()
     (dist / 'site-version.json').write_text(json.dumps({'source_repository': 'englishmath75/pico-lab-classroom', 'source_sha': source_sha}, indent=2))
