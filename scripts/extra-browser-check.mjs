@@ -31,5 +31,11 @@ try{
  }
  await p.goto(origin+'/first-analysis.html');const first=p.frameLocator('#sw-classroom-frame');await first.locator('#analysisNote').fill('가상 자료의 분석 설명');await p.locator('nav[aria-label="수업 메뉴"] [data-route=home]').click();await p.goBack();await expect(first.locator('#analysisNote')).toHaveValue('가상 자료의 분석 설명');
  const txt=p.waitForEvent('download');await first.locator('#saveNote').click();assert((await txt).suggestedFilename().endsWith('.txt'));
+ await p.goto(origin+'/?page=data');const data=p.frameLocator('#sw-classroom-frame');
+ await data.locator('#uploadCsv').setInputFiles({name:'fictional-test.csv',mimeType:'text/csv',buffer:Buffer.from('item,sales\nPRIVATE_CSV_FIXTURE,7')});
+ await expect(data.locator('#csvInput')).toHaveValue('item,sales\nPRIVATE_CSV_FIXTURE,7');
+ const exportWait=p.waitForEvent('download');await p.locator('#sw-export').click();const exportFile=await exportWait;await exportFile.saveAs(path.join(dir,'user-csv-boundary.json'));const exported=await readFile(path.join(dir,'user-csv-boundary.json'),'utf8');assert(!exported.includes('PRIVATE_CSV_FIXTURE'));assert(exported.includes('user-file'));
+ await p.locator('nav[aria-label="수업 메뉴"] [data-route=home]').click();await p.goBack();await expect(data.locator('#csvInput')).toHaveValue('item,sales\nPRIVATE_CSV_FIXTURE,7');
+ results.push({userCsv:'selected file remains in same-session memory; excluded from account backup',status:'PASS'});
  assert.deepEqual(errors,[]);console.log('PASS all registered routes, old aliases, read-only controls and real CSV/Python/JSON/TXT downloads');
 }finally{await writeFile(path.join(dir,'extra-browser-results.json'),JSON.stringify({environment:'Anonymous local Chromium; no production login, data writes or camera',sourceSha:process.env.SW_SOURCE_SHA,results,errors},null,2));await b.close();await new Promise(r=>server.close(r));}
