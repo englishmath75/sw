@@ -12,7 +12,7 @@ UNIT = re.compile(r'(<span\s+class=[\"\']classroom-unit[\"\']>)(.*?)(</span>)', 
 CSS_LINK = re.compile(r'(classroom-brand\.css)(?:\?[^\"\'\s<>]*)?')
 CSS_RULE = re.compile(r'\.classroom-page\s+\.side\s+\.brand\.brand-mk-aligned\s+\.classroom-unit\s*\{([^}]*)\}')
 PUBLIC = 'https://sw.englishmath.kr/'
-PAGES = ('', '?page=home', 'step-by-step.html?lesson=1', '?page=data', '?page=exam', '?page=report')
+PAGES = ('', '?page=home', 'step-by-step.html?lesson=1', '?page=data', '?page=exam', '?page=report', 'ai-avatar.html')
 
 
 def verify_css(css):
@@ -24,10 +24,29 @@ def verify_css(css):
         raise ValueError('Course label must remain on one line')
 
 
+def verify_avatar(text):
+    sidebar = re.search(r'<aside\b[^>]*>(.*?)</aside>', text, re.S)
+    if not sidebar:
+        raise ValueError('Avatar sidebar is missing')
+    sidebar = sidebar[1]
+    links = re.findall(r'<a\b[^>]*href=[\"\'][^\"\']*ai-avatar\.html[^\"\']*[\"\'][^>]*>.*?</a>', sidebar, re.S)
+    if len(links) != 1:
+        raise ValueError('Expected exactly one avatar navigation card')
+    card = links[0]
+    if not all(token in card for token in ('avatar-nav', 'avatar-extra', '추가 체험', 'aria-current="page"')):
+        raise ValueError('Avatar must use the current pink extra-activity card')
+    if sidebar.index(card) > sidebar.index('00. Python 핵심 복습'):
+        raise ValueError('Extra activity must precede the numbered lessons')
+    if 'brand-mk-aligned' not in sidebar or LABEL not in sidebar:
+        raise ValueError('Avatar must reuse the current classroom identity')
+    if 'https://englishmath-python.vercel.app/data-lab' not in sidebar:
+        raise ValueError('Current data-lab shortcut is missing')
+
+
 def finalize(dist, source_sha):
     dist = Path(dist)
     verify_css((dist / 'classroom-brand.css').read_text(encoding='utf-8'))
-    for name in ('index.html', 'step-by-step.html'):
+    for name in ('index.html', 'step-by-step.html', 'ai-avatar.html'):
         path = dist / name
         text = path.read_text(encoding='utf-8')
         matches = list(UNIT.finditer(text))
@@ -37,6 +56,8 @@ def finalize(dist, source_sha):
         text, count = CSS_LINK.subn(lambda m: m[1] + '?v=' + source_sha[:12], text)
         if count != 1:
             raise ValueError(f'{name}: expected one shared brand stylesheet')
+        if name == 'ai-avatar.html':
+            verify_avatar(text)
         path.write_text(text, encoding='utf-8')
         print(f'PACKAGED {name}: {LABEL}; desktop=16px; css={source_sha[:12]}', flush=True)
 
@@ -65,7 +86,11 @@ def verify_live(source_sha):
                     raise ValueError(f'{route}: new sidebar label is not publicly available')
                 if 'classroom-brand.css?v=' + source_sha[:12] not in text:
                     raise ValueError(f'{route}: outdated stylesheet link')
-                evidence.append({'url': PUBLIC + route, 'label': LABEL, 'desktop_font_px': 16})
+                entry = {'url': PUBLIC + route, 'label': LABEL, 'desktop_font_px': 16}
+                if route == 'ai-avatar.html':
+                    verify_avatar(text)
+                    entry.update(pink_extra_activity=True, duplicate_avatar_links=0, lesson_order='extra before 00')
+                evidence.append(entry)
             print(json.dumps({'result': 'PASS', 'source_sha': source_sha, 'pages': evidence}, ensure_ascii=False, indent=2), flush=True)
             return
         except Exception as error:

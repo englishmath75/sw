@@ -97,9 +97,15 @@ jobs:
           set -o pipefail
           mkdir -p verification
           python3 scripts/finalize_brand.py --live --source-sha "$SOURCE_SHA" | tee verification/public-check.txt
-      - name: Capture public desktop pages at 100 percent
+      - name: Prepare Korean screenshot fonts
         continue-on-error: true
         timeout-minutes: 3
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
+      - name: Capture public desktop and avatar pages at 100 percent
+        continue-on-error: true
+        timeout-minutes: 5
         env:
           SOURCE_SHA: ${{ needs.check.outputs.source_sha }}
         run: |
@@ -110,6 +116,20 @@ jobs:
           fi
           timeout 60s "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1000 --force-device-scale-factor=1 --virtual-time-budget=8000 --user-data-dir="$RUNNER_TEMP/sw-home-check" --screenshot="$PWD/verification/sw-home-desktop.png" "https://sw.englishmath.kr/?verify=$SOURCE_SHA"
           timeout 60s "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1000 --force-device-scale-factor=1 --virtual-time-budget=8000 --user-data-dir="$RUNNER_TEMP/sw-lesson-check" --screenshot="$PWD/verification/sw-lesson-desktop.png" "https://sw.englishmath.kr/step-by-step.html?lesson=1&verify=$SOURCE_SHA"
+          timeout 60s "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1000 --force-device-scale-factor=1 --virtual-time-budget=8000 --user-data-dir="$RUNNER_TEMP/sw-avatar-check" --screenshot="$PWD/verification/sw-avatar-desktop.png" --dump-dom "https://sw.englishmath.kr/ai-avatar.html?verify=$SOURCE_SHA" > verification/sw-avatar-rendered.html
+          timeout 60s "$CHROME" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size=600,1000 --force-device-scale-factor=1 --virtual-time-budget=8000 --user-data-dir="$RUNNER_TEMP/sw-avatar-responsive" --screenshot="$PWD/verification/sw-avatar-responsive.png" "https://sw.englishmath.kr/ai-avatar.html?verify=$SOURCE_SHA"
+          python3 - <<'PY'
+          import json, re
+          from pathlib import Path
+          from scripts.finalize_brand import verify_avatar
+          text = Path('verification/sw-avatar-rendered.html').read_text()
+          verify_avatar(text)
+          count = len(re.findall(r'<button\b[^>]*class="[^"]*animal-option', text))
+          assert count == 8, f'Expected 8 rendered animal buttons, got {count}'
+          result = {'result': 'PASS', 'rendered_animal_buttons': count, 'pink_sidebar': True, 'camera_started_by_test': False, 'physical_camera_test': 'NOT_RUN'}
+          Path('verification/avatar-render-check.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
+          print(json.dumps(result))
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
