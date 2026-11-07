@@ -56,28 +56,26 @@ MOBILE_STYLE_VERSION = '20261107-mobile-menu-fix1'
 
 
 def apply_sw_mobile_layout(dist):
-    """Repair the integrated SW mobile menu without changing the pinned source."""
-    sheet = dist / 'sw-assets' / 'site.css'
-    if not sheet.is_file():
-        return  # Baseline releases have no integrated SW application.
-    current = sheet.read_text(encoding='utf-8')
-    if 'Mobile course menu fix, packaged on the pinned SW release only.' not in current:
-        sheet.write_text(current + '\n' + SW_MOBILE_LAYOUT_FIX + '\n', encoding='utf-8')
-    # Cache-bust the original CSS URL across all integrated classroom routes.
+    """Load a separate, versioned mobile stylesheet after existing SW styles."""
+    assets = dist / 'sw-assets'
+    if not (assets / 'site.css').is_file():
+        return  # Preserved baseline has no integrated SW shell.
+    (assets / 'mobile-layout.css').write_text(SW_MOBILE_LAYOUT_FIX + '\n', encoding='utf-8')
+    link = ('<link rel="stylesheet" '
+            'href="/sw-assets/mobile-layout.css?v=' + MOBILE_STYLE_VERSION + '">')
     count = 0
     for page in dist.rglob('*.html'):
         original = page.read_text(encoding='utf-8')
-        revised = re.sub(
-            r'(sw-assets/site\.css)(?:\?[^"\'<>\s]*)?',
-            lambda m: m[1] + '?v=' + MOBILE_STYLE_VERSION,
-            original,
-        )
-        if revised != original:
-            page.write_text(revised, encoding='utf-8')
-            count += 1
+        if 'data-sw-integrated="2"' not in original:
+            continue
+        if original.count('</head>') != 1:
+            raise ValueError(f'Missing SW document head in {page}')
+        if '/sw-assets/mobile-layout.css' not in original:
+            page.write_text(original.replace('</head>', link + '</head>', 1), encoding='utf-8')
+        count += 1
     if count < 3:
-        raise ValueError('Integrated SW mobile styles must be linked by all classroom routes')
-    print(f'PACKAGED SW mobile menu repair: {count} HTML routes', flush=True)
+        raise ValueError(f'Expected at least 3 integrated classroom routes; found {count}')
+    print(f'PACKAGED SW mobile layout CSS on {count} classroom routes', flush=True)
 
 
 
