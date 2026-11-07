@@ -1,0 +1,30 @@
+{
+  "sourceSha": "5825ef05bd712b796ab2819ef0134baf5cfb639a",
+  "environment": "Production anonymous Chromium; no Google login or physical camera",
+  "checks": [
+    "home, legacy lesson and common menu",
+    "native data lab, actual Python shape (3,2)",
+    "production Turtle actual code, position and empty initial frame",
+    "Ctrl+Enter executes; multiple Korean Matplotlib figures synchronized with trace",
+    "edited Python artwork executes and displays 90 recorded frames",
+    "pink avatar menu; eight animals; camera inactive"
+  ],
+  "realGoogle": "NOT_RUN",
+  "independentBrowser": "NOT_RUN",
+  "schoolPC": "NOT_RUN",
+  "physicalCamera": "NOT_RUN",
+  "siteVersion": {
+    "source_repository": "englishmath75/pico-lab-classroom",
+    "source_sha": "5825ef05bd712b796ab2819ef0134baf5cfb639a",
+    "publisher_repository": "englishmath75/sw",
+    "publisher_sha": "22d4c8ea27b2760619c4a833ea6a640695d4fc02",
+    "release_policy": "pinned validated SW source"
+  },
+  "outputStyle": {
+    "color": "rgb(23, 56, 74)",
+    "background": "rgb(237, 245, 247)",
+    "fontSize": 15,
+    "contrast": 11.172917439284126
+  },
+  "status": "PASS"
+}

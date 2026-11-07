@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-07T17:07:00+09:00",
+  "origin": "https://sw.englishmath.kr",
+  "source": "5825ef05bd712b796ab2819ef0134baf5cfb639a",
+  "publisher": "c1c1102599e82ec1e03afe7932cd3123f3682108",
+  "environment": "Work cloud Chrome, anonymous; no account data written",
+  "checks": [
+    {
+      "page": "/?page=data-lab&unit=SW01",
+      "checks": [
+        "actual pandas execution",
+        "last step (3, 2) and 3 DataFrame objects",
+        "first step has no stdout, variables or tables",
+        "last step restores recorded result",
+        "reload shows dark output rgb(23,56,74), background rgb(237,245,247), 15px"
+      ]
+    },
+    {
+      "page": "/?page=practice&workspace=scratch-01",
+      "checks": [
+        "edited Python creates cyan square with pen width 4",
+        "first step has no drawing or objects",
+        "last step displays position (0,0), heading 0, cyan, width 4, loop variable I=3"
+      ]
+    }
+  ],
+  "screenshot": "production-screen.jpg",
+  "googleAccount": "NOT_RUN",
+  "schoolPC": "FIELD_PENDING"
+}

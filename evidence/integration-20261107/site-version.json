@@ -1,0 +1,7 @@
+{
+  "source_repository": "englishmath75/pico-lab-classroom",
+  "source_sha": "5825ef05bd712b796ab2819ef0134baf5cfb639a",
+  "publisher_repository": "englishmath75/sw",
+  "publisher_sha": "22d4c8ea27b2760619c4a833ea6a640695d4fc02",
+  "release_policy": "pinned validated SW source"
+}

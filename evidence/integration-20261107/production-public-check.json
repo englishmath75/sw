@@ -1,0 +1,44 @@
+{
+  "result": "PASS",
+  "source_sha": "5825ef05bd712b796ab2819ef0134baf5cfb639a",
+  "pages": [
+    {
+      "url": "https://sw.englishmath.kr/",
+      "label": "고2 | 소프트웨어와 생활",
+      "desktop_font_px": 16
+    },
+    {
+      "url": "https://sw.englishmath.kr/?page=home",
+      "label": "고2 | 소프트웨어와 생활",
+      "desktop_font_px": 16
+    },
+    {
+      "url": "https://sw.englishmath.kr/step-by-step.html?lesson=1",
+      "label": "고2 | 소프트웨어와 생활",
+      "desktop_font_px": 16
+    },
+    {
+      "url": "https://sw.englishmath.kr/?page=data",
+      "label": "고2 | 소프트웨어와 생활",
+      "desktop_font_px": 16
+    },
+    {
+      "url": "https://sw.englishmath.kr/?page=exam",
+      "label": "고2 | 소프트웨어와 생활",
+      "desktop_font_px": 16
+    },
+    {
+      "url": "https://sw.englishmath.kr/?page=report",
+      "label": "고2 | 소프트웨어와 생활",
+      "desktop_font_px": 16
+    },
+    {
+      "url": "https://sw.englishmath.kr/ai-avatar.html",
+      "label": "고2 | 소프트웨어와 생활",
+      "desktop_font_px": 16,
+      "pink_extra_activity": true,
+      "duplicate_avatar_links": 0,
+      "lesson_order": "extra before 00"
+    }
+  ]
+}

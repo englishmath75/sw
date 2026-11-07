@@ -1,0 +1,16 @@
+{
+  "sourceSha": "5825ef05bd712b796ab2819ef0134baf5cfb639a",
+  "publisherSha": "22d4c8ea27b2760619c4a833ea6a640695d4fc02",
+  "software": 118,
+  "field": 2,
+  "statuses": {
+    "PASS": 117,
+    "BLOCKED": 1,
+    "FIELD_PENDING": 2
+  },
+  "productionDeployed": true,
+  "buildAndPublicChecks": "PASS",
+  "workflow": "https://github.com/englishmath75/sw/actions/runs/42354394142",
+  "productionEvidenceSHA256": "c24d0cd612bc24164c3ea9834efbf55caf09c6365571c11fe5d5683c55e58a5a",
+  "timestampKST": "2026-11-07T17:16:00+09:00"
+}

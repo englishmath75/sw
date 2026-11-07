@@ -1,0 +1,66 @@
+{
+  "sourceSha": "5825ef05bd712b796ab2819ef0134baf5cfb639a",
+  "browser": "chrome",
+  "checks": [
+    {
+      "playlist": "learning-videos/v5/ep01/index.m3u8",
+      "status": "PASS",
+      "time": 1.0485,
+      "width": 1920,
+      "height": 1081,
+      "duration": 255.29999700000002,
+      "presentedFrames": 36,
+      "mediaError": null,
+      "errors": [],
+      "warnings": [],
+      "segmentRequests": [
+        "https://englishmath75.github.io/pico-lab-classroom/learning-videos/v5/ep01/part-000.ts",
+        "https://englishmath75.github.io/pico-lab-classroom/learning-videos/v5/ep01/part-001.ts",
+        "https://englishmath75.github.io/pico-lab-classroom/learning-videos/v5/ep01/part-002.ts"
+      ]
+    },
+    {
+      "playlist": "learning-videos/v6/step1/index.m3u8",
+      "status": "PASS",
+      "time": 1.0286,
+      "width": 1920,
+      "height": 1080,
+      "duration": 748,
+      "presentedFrames": 36,
+      "mediaError": null,
+      "errors": [],
+      "warnings": [],
+      "segmentRequests": [
+        "https://englishmath75.github.io/pico-lab-classroom/learning-videos/v6/step1/part-000.ts",
+        "https://englishmath75.github.io/pico-lab-classroom/learning-videos/v6/step1/part-001.ts"
+      ]
+    },
+    {
+      "playlist": "videos/lesson10/index.m3u8",
+      "status": "PASS",
+      "time": 1.02246,
+      "width": 1920,
+      "height": 1080,
+      "duration": 1361.400012999999,
+      "presentedFrames": 35,
+      "mediaError": null,
+      "errors": [],
+      "warnings": [
+        {
+          "type": "mediaError",
+          "details": "bufferSeekOverHole",
+          "fatal": false,
+          "reason": "fragment loaded with buffer holes, seeking from 0 to 0.12133300000000001",
+          "error": "fragment loaded with buffer holes, seeking from 0 to 0.12133300000000001"
+        }
+      ],
+      "segmentRequests": [
+        "https://englishmath75.github.io/pico-lab-classroom/pandas-data-lab/videos/lesson10/part-lesson-only-000.ts",
+        "https://englishmath75.github.io/pico-lab-classroom/pandas-data-lab/videos/lesson10/part-lesson-only-001.ts"
+      ]
+    }
+  ],
+  "status": "PASS",
+  "networkFailures": [],
+  "pageErrors": []
+}

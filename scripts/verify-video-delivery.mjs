@@ -5,9 +5,9 @@ import path from 'node:path';
 const {chromium}=createRequire(path.resolve('package.json'))('@playwright/test');
 const origin=process.env.SW_VERIFY_ORIGIN||'https://sw.englishmath.kr';
 const dir=path.resolve(process.env.VERIFICATION_DIR||'verification');await mkdir(dir,{recursive:true});
-const browser=await chromium.launch({headless:true,args:['--no-sandbox'],...(process.env.SW_VIDEO_BROWSER==='chrome'?{channel:'chrome'}:{})});
+const browser=await chromium.launch({headless:true,args:['--no-sandbox'],channel:process.env.SW_VIDEO_BROWSER||'chrome'});
 const context=await browser.newContext({viewport:{width:1280,height:900}});
-const page=await context.newPage(),proof={sourceSha:process.env.SOURCE_SHA,browser:process.env.SW_VIDEO_BROWSER||'chromium',checks:[],status:'FAIL',networkFailures:[],pageErrors:[]};
+const page=await context.newPage(),proof={sourceSha:process.env.SOURCE_SHA,browser:process.env.SW_VIDEO_BROWSER||'chrome',checks:[],status:'FAIL',networkFailures:[],pageErrors:[]};
 page.on('requestfailed',r=>proof.networkFailures.push({url:r.url(),error:r.failure()?.errorText}));page.on('pageerror',e=>proof.pageErrors.push(e.message));
 try{
  const delivery=await (await page.request.get(origin+'/video-delivery.json')).json();
@@ -23,9 +23,11 @@ try{
    hls.on(Hls.Events.ERROR,(_,data)=>{window.videoErrors.push({type:data.type,details:data.details,fatal:data.fatal,reason:data.reason,error:data.error?.message});});
    hls.attachMedia(v);hls.loadSource(src);hls.on(Hls.Events.MANIFEST_PARSED,()=>v.play().catch(e=>window.videoErrors.push(e.message)));
   },origin+'/'+playlist);
-  await page.waitForFunction(()=>{const v=document.getElementById('v');return v.currentTime>.1&&v.videoWidth>0;},null,{timeout:90000});
-  const state=await page.evaluate(()=>{const v=document.getElementById('v');v.pause();return {time:v.currentTime,width:v.videoWidth,height:v.videoHeight,duration:v.duration,errors:window.videoErrors};});
-  assert.deepEqual(state.errors,[]);assert(requests.length>0,'Original video segments must be fetched');
+  await page.waitForFunction(()=>{const v=document.getElementById('v');return v.currentTime>.5&&v.videoWidth>0&&!v.paused&&v.getVideoPlaybackQuality().totalVideoFrames>0;},null,{timeout:90000});
+  const firstTime=await page.locator('video').evaluate(v=>v.currentTime);
+  await page.waitForFunction(first=>document.getElementById('v').currentTime>first+.5,firstTime,{timeout:15000});
+  const state=await page.evaluate(()=>{const v=document.getElementById('v');v.pause();return {time:v.currentTime,width:v.videoWidth,height:v.videoHeight,duration:v.duration,presentedFrames:v.getVideoPlaybackQuality().totalVideoFrames,mediaError:v.error?{code:v.error.code,message:v.error.message}:null,errors:window.videoErrors.filter(e=>typeof e==='string'||e.fatal),warnings:window.videoErrors.filter(e=>typeof e!=='string'&&!e.fatal)};});
+  assert.equal(state.mediaError,null);assert.deepEqual(state.errors,[]);assert(requests.length>0,'Original video segments must be fetched');
   await page.screenshot({path:path.join(dir,'video-playback-'+i+'.png')});
   proof.checks.push({playlist,status:'PASS',...state,segmentRequests:requests});
   await page.evaluate(()=>hls.destroy());page.off('request',record);
