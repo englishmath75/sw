@@ -1,0 +1,2201 @@
+{
+  "results": [
+    {
+      "name": "sw3-2026-g2-swx0005 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 904,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0006 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 734,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0007 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 969,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0008 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 712,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0009 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 762,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0010 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 454,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0012 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 394,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0013 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 458,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0014 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 422,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0015 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 633,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0016 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 366,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0017 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 401,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0020 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 450,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0021 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 438,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0022 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 782,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0038 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 412,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0039 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 424,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0040 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 401,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0041 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 472,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0042 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 426,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0043 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 408,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0044 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 446,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0045 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 716,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0047 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 450,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0052 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 446,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0054 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 500,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0055 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 786,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0056 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 486,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0057 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 393,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0058 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 414,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0060 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 358,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0061 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 459,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0062 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 497,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0063 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 393,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0064 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 398,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0065 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 707,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0066 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 454,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0067 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 471,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0068 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 458,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0069 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 463,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0070 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 397,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0071 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 439,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0072 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 400,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0073 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 418,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0075 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 495,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0076 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 664,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0078 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 453,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0080 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 428,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0096 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 426,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0097 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 411,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0098 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 370,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0099 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 336,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0100 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 412,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0101 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 461,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0102 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 529,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0103 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 438,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0104 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 462,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0105 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 487,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0106 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 538,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0107 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 476,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0108 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 458,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0109 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 382,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0110 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 491,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0111 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 493,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0112 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 371,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0113 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 382,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0114 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 385,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0115 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 396,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0116 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 439,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0117 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 468,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0118 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 488,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0119 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 612,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0120 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 781,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0121 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 505,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0122 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 499,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0123 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 460,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0124 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 609,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0125 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 470,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0126 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 557,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0127 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 460,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0128 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 542,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0129 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 675,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0130 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 510,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0131 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 516,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0132 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 520,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0133 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 640,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0134 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 391,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0135 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 717,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0136 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 417,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0137 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 453,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0138 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 438,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0139 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 650,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0140 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 626,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0141 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 483,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0142 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 436,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0158 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 503,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0159 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 430,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0160 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 401,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0161 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 455,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0162 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 442,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0163 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 496,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0164 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 646,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0165 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 471,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0166 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 403,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0167 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 459,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0168 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 392,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0169 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 608,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0170 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 375,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0171 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 410,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0172 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 460,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0173 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 445,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0174 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 585,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0175 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 500,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0176 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 529,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0177 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 434,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0178 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 405,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0179 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 573,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0180 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 514,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0181 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 442,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0182 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 381,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0183 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 352,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0184 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 366,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0185 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 400,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0188 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 702,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-1-step-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 394,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-1-step-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 376,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-1-step-3 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 376,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-1-step-4 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 569,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-1-step-5 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 418,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-2-step-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 400,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-2-step-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 387,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-2-step-3 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 376,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-2-step-4 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 366,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-2-step-5 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 433,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-3-step-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 355,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-3-step-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 360,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-3-step-3 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 375,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-3-step-4 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 409,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-3-step-5 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 417,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-4-step-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 417,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-4-step-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 368,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-4-step-3 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 349,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-4-step-4 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 367,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-4-step-5 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 368,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-5-step-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 469,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-5-step-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 548,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-5-step-3 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 455,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-5-step-4 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 399,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-5-step-5 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 384,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-6-step-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 412,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-6-step-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 383,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-6-step-3 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 388,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-6-step-4 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 382,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-6-step-5 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 620,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-7-step-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 431,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-7-step-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 445,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-7-step-3 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 382,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-7-step-4 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 389,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-7-step-5 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 511,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-8-step-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 600,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-8-step-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 386,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-8-step-3 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 407,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-8-step-4 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 393,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-8-step-5 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 555,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-9-step-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 651,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-9-step-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 445,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-9-step-3 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 424,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-9-step-4 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 420,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-9-step-5 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 392,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-10-step-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 378,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-10-step-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 402,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-10-step-3 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 365,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-10-step-4 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 369,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-10-step-5 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 580,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-kosis-project-python opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 416,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-simulation-python opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 434,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-avatar-python opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 408,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw01-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 407,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw01-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 437,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw03-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 367,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw03-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 347,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw04-1 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 353,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw04-2 opens and saves its own code/input",
+      "status": "PASS",
+      "durationMs": 346,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0005 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 132,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0006 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 134,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0007 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 126,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0008 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 121,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0009 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 142,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0010 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 153,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0012 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 125,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0013 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 123,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0014 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 135,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0015 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 123,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0016 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0017 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0020 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 124,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0021 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 125,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0022 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0038 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 115,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0039 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0040 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0041 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0042 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 185,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0043 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 123,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0044 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0045 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 130,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0047 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0052 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 121,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0054 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 114,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0055 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 115,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0056 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 115,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0057 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 115,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0058 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0060 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 20,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0061 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0062 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0063 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 126,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0064 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0065 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 121,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0066 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 115,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0067 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 145,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0068 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 129,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0069 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 130,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0070 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 124,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0071 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0072 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0073 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0075 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0076 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 124,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0078 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 127,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0080 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0096 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 127,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0097 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 127,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0098 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 127,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0099 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 141,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0100 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 130,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0101 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 147,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0102 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 198,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0103 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0104 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0105 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0106 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0107 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0108 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0109 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0110 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 124,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0111 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0112 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0113 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0114 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0115 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 114,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0116 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0117 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 131,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0118 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 139,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0119 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 130,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0120 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 124,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0121 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 128,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0122 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0123 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0124 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0125 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 115,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0126 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0127 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0128 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 121,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0129 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0130 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 124,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0131 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0132 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 114,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0133 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0134 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0135 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0136 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 138,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0137 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0138 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0139 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 114,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0140 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0141 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0142 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 133,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0158 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0159 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0160 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0161 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 123,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0162 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 127,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0163 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0164 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0165 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0166 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0167 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 112,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0168 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 153,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0169 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0170 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 121,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0171 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0172 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0173 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 123,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0174 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0175 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 124,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0176 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 129,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0177 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0178 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0179 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 121,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0180 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0181 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0182 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0183 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 114,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0184 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 130,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0185 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 169,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-swx0188 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 125,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-1-step-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 124,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-1-step-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-1-step-3 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-1-step-4 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 121,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-1-step-5 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-2-step-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-2-step-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 124,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-2-step-3 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-2-step-4 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-2-step-5 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-3-step-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-3-step-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 115,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-3-step-3 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-3-step-4 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-3-step-5 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 130,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-4-step-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 146,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-4-step-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 124,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-4-step-3 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-4-step-4 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 114,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-4-step-5 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-5-step-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-5-step-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-5-step-3 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 123,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-5-step-4 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 124,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-5-step-5 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-6-step-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-6-step-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 121,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-6-step-3 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-6-step-4 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 114,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-6-step-5 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 121,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-7-step-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-7-step-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-7-step-3 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 199,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-7-step-4 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 128,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-7-step-5 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 123,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-8-step-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-8-step-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-8-step-3 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-8-step-4 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-8-step-5 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-9-step-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 114,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-9-step-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-9-step-3 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-9-step-4 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-9-step-5 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-10-step-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 114,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-10-step-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 116,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-10-step-3 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 117,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-10-step-4 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 120,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-lesson-10-step-5 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 127,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-kosis-project-python restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 138,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-simulation-python restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 114,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-avatar-python restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 119,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw01-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 123,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw01-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 118,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw03-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 123,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw03-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 123,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw04-1 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 122,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    },
+    {
+      "name": "sw3-2026-g2-datalab-sw04-2 restores in independent browser context",
+      "status": "PASS",
+      "durationMs": 126,
+      "environment": "Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)"
+    }
+  ],
+  "errors": []
+}

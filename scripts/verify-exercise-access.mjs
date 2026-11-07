@@ -54,11 +54,11 @@ async function login(p,person){
 }
 async function nav(p,id){await p.locator('a[data-route="'+id+'"]').click();await expect(p).toHaveURL(new RegExp('[?&]page='+id+'(?:&|$)'));if(id!=='data-lab'&&id!=='practice'&&id!=='library')await expect(p.locator('#sw-classroom-frame')).toBeVisible();}
 async function scenario(name,fn){
- const started=Date.now();try{await fn();results.push({name,status:'PASS',durationMs:Date.now()-started,environment:'Chromium + Firebase emulators; clock advances only to skip the previously verified 16-second save pacing'});console.log('PASS',name);}catch(e){results.push({name,status:'FAIL',error:e.message,durationMs:Date.now()-started});throw e;}
+ const started=Date.now();try{await fn();results.push({name,status:'PASS',durationMs:Date.now()-started,environment:'Chromium + Firebase emulators; clock skips verified 16-second pacing; emulator quota fixture reset after 100 saves (production 150/day policy unchanged)'});console.log('PASS',name);}catch(e){results.push({name,status:'FAIL',error:e.message,durationMs:Date.now()-started});throw e;}
 }
 async function shot(p,name){await p.screenshot({path:resolve(artifacts,name+'.png'),fullPage:false});if(['datalab-python-table','lesson-account-restored','avatar-common-menu','layout-390','home-390','home-1440','review-390','review-1440'].includes(name)){const b=await p.screenshot({type:'jpeg',quality:55,fullPage:false});console.log('SW_PREVIEW '+name+' '+b.toString('base64'));}}const EX='sw3-2026-g2-swx0060',BASE='/?page=exercise&exercise='+EX;
 const CODE='A = [3, 5, 2]\nB = A\nA.append(7)\nprint(B)';
-const age=async()=>{const r=await fetch(localDocs+'users/'+people.student.uid+'/limits/state?updateMask.fieldPaths=updatedAt',{method:'PATCH',headers:{Authorization:'Bearer owner','Content-Type':'application/json'},body:JSON.stringify({fields:{updatedAt:{timestampValue:new Date(Date.now()-20000).toISOString()}}})});assert(r.ok);};
+const age=async(resetQuota=false)=>{const fields={updatedAt:{timestampValue:new Date(Date.now()-20000).toISOString()}};if(resetQuota)fields.count={integerValue:'0'};const r=await fetch(localDocs+'users/'+people.student.uid+'/limits/state?updateMask.fieldPaths=updatedAt'+(resetQuota?'&updateMask.fieldPaths=count':''),{method:'PATCH',headers:{Authorization:'Bearer owner','Content-Type':'application/json'},body:JSON.stringify({fields})});assert(r.ok);};
 async function code(p,text){const e=p.locator('.cm-content').first();await e.click();await e.press('ControlOrMeta+a');await e.fill(text);}
 try{
  await seed();const types={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.svg':'image/svg+xml','.wasm':'application/wasm','.py':'text/plain','.csv':'text/csv','.ttf':'font/ttf'};
@@ -70,7 +70,7 @@ try{
  const navigate=async(p,id)=>{await p.evaluate(url=>{history.pushState(null,'',url);dispatchEvent(new PopStateEvent('popstate'));},'/?page=exercise&exercise='+id);};
  school=await device(BASE,{clock:true});const p=school.page;await login(p,people.student);
  for(const [i,e] of catalog.entries())await scenario(e.id+' opens and saves its own code/input',async()=>{
-  if(i){await age();await p.clock.fastForward(17000);}await navigate(p,e.id);
+  if(i){await age(i===100);await p.clock.fastForward(17000);}await navigate(p,e.id);
   await expect(p.locator('.sw-practice h2')).toHaveText(e.title);
   await expect(p.locator('.cm-content')).not.toHaveText('');
   await code(p,sample(e,i));await p.locator('.sw-practice textarea').first().fill(String(i));
