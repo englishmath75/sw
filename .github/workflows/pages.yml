@@ -79,7 +79,7 @@ jobs:
         with:
           path: source/dist
   deploy:
-    timeout-minutes: 30
+    timeout-minutes: 45
     needs: [check,build]
     runs-on: ubuntu-24.04
     environment:
