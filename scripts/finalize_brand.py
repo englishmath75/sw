@@ -13,6 +13,7 @@ CSS_LINK = re.compile(r'(classroom-brand\.css)(?:\?[^\"\'\s<>]*)?')
 CSS_RULE = re.compile(r'\.classroom-page\s+\.side\s+\.brand\.brand-mk-aligned\s+\.classroom-unit\s*\{([^}]*)\}')
 PUBLIC = 'https://sw.englishmath.kr/'
 PAGES = ('', '?page=home', 'step-by-step.html?lesson=1', '?page=data', '?page=exam', '?page=report', 'ai-avatar.html')
+TRACE_STYLE = '<style id="sw-output-contrast">#sw-view .sw-trace pre{color:#17384a;background:#edf5f7;font-size:15px;line-height:1.6}</style>'
 
 
 def verify_css(css):
@@ -63,6 +64,13 @@ def finalize(dist, source_sha):
             raise ValueError(f'{name}: expected one shared brand stylesheet')
         if name == 'ai-avatar.html':
             verify_avatar(text)
+        if name == 'index.html' and 'data-sw-integrated="2"' in text:
+            # Pair foreground/background: the data-lab theme otherwise leaves
+            # pale console text on the shell's pale pre background.
+            text = re.sub(r'<style id="sw-output-contrast">.*?</style>', '', text, flags=re.S)
+            if text.count('</head>') != 1:
+                raise ValueError('Expected one SW shell head for output contrast')
+            text = text.replace('</head>', TRACE_STYLE + '</head>')
         path.write_text(text, encoding='utf-8')
         print(f'PACKAGED {name}: {LABEL}; desktop=16px; css={source_sha[:12]}', flush=True)
 
