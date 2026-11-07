@@ -1,0 +1,19 @@
+{
+  "project": "englishmath-python-classroom",
+  "applied": true,
+  "source_sha": "5825ef05bd712b796ab2819ef0134baf5cfb639a",
+  "rules_sha256": "d3e9eef2efbb38a244f0f8030c3e8834c77b6dd27e8bc08946b975dafec68821",
+  "previous_rules_sha256": "81db0ec12e9bba91504f847af089b92656ba5c21216787459198ecb66f6eee1e",
+  "applied_at": "2026-11-07T14:15:00+09:00",
+  "approved_new_exercise_ids": 183,
+  "authorization": "User explicitly approved adding the new exercise IDs to the existing Firebase rules.",
+  "verification": {
+    "previous_published_rules_equal_baseline": true,
+    "draft_equal_approved_file": true,
+    "published_rules_equal_approved_file_after_reload": true,
+    "console_published_version": "2026-11-07 14:15 Asia/Seoul",
+    "student_owner_class_teacher_policies_unchanged": true
+  },
+  "console_url": "https://console.firebase.google.com/u/0/project/englishmath-python-classroom/firestore/databases/-default-/security/rules",
+  "evidence": "evidence/integration-20261107/firestore-published.png"
+}

@@ -1,0 +1,48 @@
+{
+  "origin": "http://127.0.0.1:41121",
+  "checkedAt": "2026-11-07T05:31:44.027Z",
+  "results": [
+    {
+      "name": "cold page and first Python run versus warm revisit and fresh Worker",
+      "status": "PASS",
+      "durationMs": 19887,
+      "environment": "Local asset server Chromium, not school network",
+      "samples": [
+        {
+          "pass": "cold",
+          "editorMs": 865,
+          "runtimeMs": 9155,
+          "domContentLoadedMs": 689.2999999970198,
+          "loadMs": 701,
+          "resources": 28
+        },
+        {
+          "pass": "warm",
+          "editorMs": 279,
+          "runtimeMs": 9105,
+          "domContentLoadedMs": 184.39999999850988,
+          "loadMs": 184.59999999403954,
+          "resources": 28
+        }
+      ]
+    },
+    {
+      "name": "keyboard editor shortcut and Tab/Enter navigate synchronized trace",
+      "status": "PASS",
+      "durationMs": 4767,
+      "input": "CodeMirror Ctrl+Enter and actual keyboard Tab/Enter; no mouse for trace"
+    },
+    {
+      "name": "200 percent CSS zoom keeps editing and all trace buttons accessible",
+      "status": "PASS",
+      "durationMs": 450,
+      "zoom": "200% CSS layout zoom at 1440x1000"
+    },
+    {
+      "name": "390px touch controls move last and first without stale output",
+      "status": "PASS",
+      "durationMs": 7657
+    }
+  ],
+  "errors": []
+}

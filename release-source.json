@@ -1,12 +1,14 @@
 {
   "repository": "englishmath75/pico-lab-classroom",
-  "source_sha": "03889ab04520ad2beea3d21d6080dc133536f396",
+  "source_sha": "5825ef05bd712b796ab2819ef0134baf5cfb639a",
   "mode": "integrated",
-  "validation_run": 42279096871,
+  "validation_run": 42342992028,
   "rules_approved": true,
   "rules_approval_status": "APPROVED_BY_USER_AND_APPLIED",
   "baseline_source_sha": "c38e7ce5e057b68898d086dde1caaaceae4f6d00",
   "baseline_publisher_sha": "17162105ba32ac5075017115901800cb298068a0",
-  "rules_approval_record": "release-approval-20261107.json",
-  "rules_sha256": "81db0ec12e9bba91504f847af089b92656ba5c21216787459198ecb66f6eee1e"
+  "rules_approval_record": "release-approval-integrated-20261107.json",
+  "rules_sha256": "d3e9eef2efbb38a244f0f8030c3e8834c77b6dd27e8bc08946b975dafec68821",
+  "previous_source_sha": "03889ab04520ad2beea3d21d6080dc133536f396",
+  "previous_publisher_sha": "b1d44df6f1e6efb0c6af8e946f82d90b051b3393"
 }
