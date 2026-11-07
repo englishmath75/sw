@@ -4,7 +4,13 @@ const release=JSON.parse(await readFile('release-source.json','utf8'));
 if(release.repository!=='englishmath75/pico-lab-classroom'||!/^[a-f0-9]{40}$/.test(release.source_sha))throw Error('Explicit SW source pin required');
 if(!['integrated','baseline'].includes(release.mode)||release.rules_approved!==true)throw Error('Release approval record is missing');
 const run=JSON.parse(execFileSync('gh',['api','repos/'+release.repository+'/actions/runs/'+release.validation_run],{encoding:'utf8'}));
-if(run.path!=='.github/workflows/sw-v2-validation.yml'||run.conclusion!=='success'||run.head_branch!=='work/sw-v2-unified-20261106')throw Error('Pinned source lacks successful SW validation');
+const validations={'.github/workflows/sw-v2-validation.yml':'work/sw-v2-unified-20261106','.github/workflows/sw-integrated-validation.yml':'work/sw-integrated-20261107'};
+if(validations[run.path]!==run.head_branch||run.conclusion!=='success')throw Error('Pinned source lacks successful SW validation');
+if(run.path==='.github/workflows/sw-integrated-validation.yml'){
+ if(release.rules_approval_status!=='APPROVED_BY_USER_AND_APPLIED'||!/^release-approval-[\w-]+\.json$/.test(release.rules_approval_record||''))throw Error('Integrated rules application record required');
+ const proof=JSON.parse(await readFile(release.rules_approval_record,'utf8'));
+ if(proof.project!=='englishmath-python-classroom'||proof.applied!==true||proof.rules_sha256!==release.rules_sha256||proof.source_sha!==release.source_sha||!proof.applied_at)throw Error('Rules application evidence differs from pinned source');
+}
 if(release.mode==='integrated'&&run.head_sha!==release.source_sha)throw Error('Validation SHA differs from source pin');
 if(release.mode==='baseline'){
  if(release.source_sha!=='c38e7ce5e057b68898d086dde1caaaceae4f6d00'||release.baseline_publisher_sha!=='17162105ba32ac5075017115901800cb298068a0'||run.head_sha!==release.baseline_validation_source_sha)throw Error('Unknown rollback pair');

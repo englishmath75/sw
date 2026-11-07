@@ -28,6 +28,7 @@ def mapped_path(path):
 
 
 def mapped_url(value, original_path):
+    value = html.unescape(value)
     if not value or value.startswith(('#', 'data:', 'mailto:', 'tel:', 'javascript:')):
         return value
     resolved = urlsplit(urljoin(ORIGIN + BASE + original_path, html.unescape(value)))
