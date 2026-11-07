@@ -1,0 +1,97 @@
+{
+  "checkedAt": "2026-11-07T06:42:45.842Z",
+  "readOnly": true,
+  "site": {
+    "status": null,
+    "cname": "sw.englishmath.kr",
+    "https_enforced": true,
+    "build_type": "workflow",
+    "html_url": "https://sw.englishmath.kr/"
+  },
+  "pagesDeployment": {
+    "status": ""
+  },
+  "deployments": [
+    {
+      "id": 7617674975,
+      "sha": "a45fc90fb6cbc132248a27b88f9c09557d1c676b",
+      "statuses": [
+        {
+          "state": "in_progress",
+          "description": "",
+          "created_at": "2026-11-07T06:31:25Z",
+          "log_url": "https://github.com/englishmath75/sw/actions/runs/42347168557/job/128327959627",
+          "environment_url": ""
+        },
+        {
+          "state": "queued",
+          "description": "",
+          "created_at": "2026-11-07T06:31:24Z",
+          "log_url": "https://github.com/englishmath75/sw/actions/runs/42347168557/job/128327959627",
+          "environment_url": ""
+        },
+        {
+          "state": "waiting",
+          "description": "",
+          "created_at": "2026-11-07T06:31:23Z",
+          "log_url": "https://github.com/englishmath75/sw/actions/runs/42347168557/job/128327959627",
+          "environment_url": ""
+        }
+      ]
+    },
+    {
+      "id": 7617548029,
+      "sha": "fe11d2946df20f0bdb1baa48a02eb326ce019ee0",
+      "statuses": [
+        {
+          "state": "error",
+          "description": "",
+          "created_at": "2026-11-07T06:29:14Z",
+          "log_url": "https://github.com/englishmath75/sw/actions/runs/42344067662/job/128325044225",
+          "environment_url": ""
+        },
+        {
+          "state": "in_progress",
+          "description": "",
+          "created_at": "2026-11-07T06:18:37Z",
+          "log_url": "https://github.com/englishmath75/sw/actions/runs/42344067662/job/128325044225",
+          "environment_url": ""
+        },
+        {
+          "state": "queued",
+          "description": "",
+          "created_at": "2026-11-07T06:18:35Z",
+          "log_url": "https://github.com/englishmath75/sw/actions/runs/42344067662/job/128325044225",
+          "environment_url": ""
+        }
+      ]
+    },
+    {
+      "id": 7617258349,
+      "sha": "fe11d2946df20f0bdb1baa48a02eb326ce019ee0",
+      "statuses": [
+        {
+          "state": "failure",
+          "description": "",
+          "created_at": "2026-11-07T06:07:52Z",
+          "log_url": "https://github.com/englishmath75/sw/actions/runs/42344067662/job/128318303413",
+          "environment_url": "https://sw.englishmath.kr/"
+        },
+        {
+          "state": "in_progress",
+          "description": "",
+          "created_at": "2026-11-07T05:47:38Z",
+          "log_url": "https://github.com/englishmath75/sw/actions/runs/42344067662/job/128318303413",
+          "environment_url": ""
+        },
+        {
+          "state": "queued",
+          "description": "",
+          "created_at": "2026-11-07T05:47:37Z",
+          "log_url": "https://github.com/englishmath75/sw/actions/runs/42344067662/job/128318303413",
+          "environment_url": ""
+        }
+      ]
+    }
+  ]
+}
