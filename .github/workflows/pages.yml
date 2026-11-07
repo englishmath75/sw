@@ -70,6 +70,8 @@ jobs:
           python3 publisher/scripts/test_package.py
           python3 publisher/scripts/package_site.py source/dist --source-sha "$SOURCE_SHA"
           python3 publisher/scripts/finalize_brand.py --dist source/dist --source-sha "$SOURCE_SHA"
+          python3 publisher/scripts/test_compact_video.py
+          python3 publisher/scripts/compact-video-assets.py source/dist --source-sha "$SOURCE_SHA"
           python3 publisher/scripts/check_site.py source/dist
           node publisher/scripts/stamp-release.mjs source/dist
       - uses: actions/configure-pages@v5
@@ -129,6 +131,12 @@ jobs:
           SOURCE_SHA: ${{ needs.check.outputs.source_sha }}
           VERIFICATION_DIR: ../verification
         run: node ../publisher/scripts/verify-live.mjs
+      - name: Verify unchanged lesson video playback
+        working-directory: source
+        env:
+          SOURCE_SHA: ${{ needs.check.outputs.source_sha }}
+          VERIFICATION_DIR: ../verification
+        run: node ../publisher/scripts/verify-video-delivery.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
