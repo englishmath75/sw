@@ -1,0 +1,42 @@
+{
+  "project": "englishmath-python-classroom",
+  "applied": true,
+  "source_sha": "98c678d544497827bfc05212ea975614b6ba1d31",
+  "rules_sha256": "dda6ec21249d899fbcca4d1d71905b411b493821c7769edb2fdd724c956c8eb5",
+  "previous_rules_sha256": "d3e9eef2efbb38a244f0f8030c3e8834c77b6dd27e8bc08946b975dafec68821",
+  "rules_file": "sw/security/enrollment-proposed.rules",
+  "applied_at": "2026-11-08T23:51:00Z",
+  "verified_at": "2026-11-08T23:52:13.906Z",
+  "method": "Firebase Console authenticated school administrator; full published editor copy SHA-256 checked",
+  "authorization": "User requested explicit school/grade/class/name registration, retirement of test approvals, immediate production deployment and completed school administrator login.",
+  "scope": "SW users enrollment and approval transitions only. Existing staff/access and MK/cohorts/public_users rules unchanged.",
+  "catalog": {
+    "path": "config/swEnrollment",
+    "verified": true,
+    "academicYear": 2026,
+    "school": "muhak-g-h",
+    "grades": [
+      1,
+      2,
+      3
+    ],
+    "classNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "approvalClassId": "class-2-1"
+  },
+  "legacy_approvals": "No enrollment => registration required and no cloud write; must re-enroll as pending. No learning records deleted.",
+  "candidate_validation_run": 42534945069,
+  "integrated_validation_run": 42536561532
+}
