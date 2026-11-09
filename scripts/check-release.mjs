@@ -4,12 +4,13 @@ const release=JSON.parse(await readFile('release-source.json','utf8'));
 if(release.repository!=='englishmath75/pico-lab-classroom'||!/^[a-f0-9]{40}$/.test(release.source_sha))throw Error('Explicit SW source pin required');
 if(!['integrated','baseline'].includes(release.mode)||release.rules_approved!==true)throw Error('Release approval record is missing');
 const run=JSON.parse(execFileSync('gh',['api','repos/'+release.repository+'/actions/runs/'+release.validation_run],{encoding:'utf8'}));
-const validations={'.github/workflows/sw-v2-validation.yml':'work/sw-v2-unified-20261106','.github/workflows/sw-integrated-validation.yml':'work/sw-integrated-20261107'};
+const validations={'.github/workflows/sw-v2-validation.yml':'work/sw-v2-unified-20261106','.github/workflows/sw-integrated-validation.yml':'work/sw-integrated-20261107','.github/workflows/sw-membership-validation.yml':'work/sw-membership-codes-20261109'};
 if(validations[run.path]!==run.head_branch||run.conclusion!=='success')throw Error('Pinned source lacks successful SW validation');
-if(run.path==='.github/workflows/sw-integrated-validation.yml'){
+if(['.github/workflows/sw-integrated-validation.yml','.github/workflows/sw-membership-validation.yml'].includes(run.path)){
  if(release.rules_approval_status!=='APPROVED_BY_USER_AND_APPLIED'||!/^release-approval-[\w-]+\.json$/.test(release.rules_approval_record||''))throw Error('Integrated rules application record required');
  const proof=JSON.parse(await readFile(release.rules_approval_record,'utf8'));
  if(proof.project!=='englishmath-python-classroom'||proof.applied!==true||proof.rules_sha256!==release.rules_sha256||!/^([a-f0-9]{40})$/.test(proof.source_sha||'')||!proof.applied_at)throw Error('Rules application evidence is missing or invalid');
+ if(run.path==='.github/workflows/sw-membership-validation.yml'&&proof.source_sha!==release.source_sha)throw Error('Membership release requires approval for this exact source SHA');
  if(proof.source_sha!==release.source_sha){
   // A previously applied rules receipt remains valid only for a strictly verified
   // descendant that changes these UI/test/docs paths, never Firebase security rules.

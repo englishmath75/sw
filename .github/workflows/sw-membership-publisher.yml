@@ -1,0 +1,24 @@
+name: SW membership publication gate verification
+on:
+  push:
+    branches: [work/sw-membership-publisher-20261109]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/test-membership-release.mjs
+      - name: Record current MK and commercial assets without modification
+        env:
+          VERIFICATION_DIR: verification
+        run: node scripts/protected-sites.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sw-membership-protected-baseline
+          path: verification/
