@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-06T16:17:20.063Z",
+  "at": "2026-11-09T04:52:22.328Z",
   "operation": "anonymous public read only",
   "sites": [
     {
@@ -7,11 +7,11 @@
       "assets": [
         {
           "url": "https://mk.englishmath.kr/app.js",
-          "sha256": "5cc755b622dfddf1bda8cac0fd165398a2e848437bd5b343955834aadb0c7643"
+          "sha256": "58bb92f70dbd500477dffbca2e7d45dce1577ad6b880ed8655baa88c19dce5cb"
         },
         {
           "url": "https://mk.englishmath.kr/mk.css",
-          "sha256": "473cd18329ee31c411b9bf4b1e34c67666b8ccdaaa16984e7ba2f47c20631599"
+          "sha256": "4e72b4d27d35453d034b64d195eb934ce78575506afd35794f24343c118234d8"
         },
         {
           "url": "https://mk.englishmath.kr/reverse-compare.css",
