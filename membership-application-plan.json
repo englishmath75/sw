@@ -1,0 +1,32 @@
+{
+  "status": "PENDING_USER_APPROVAL",
+  "project": "englishmath-python-classroom",
+  "rules": {
+    "before_sha256": "68441c8d2197ac98c8550ffa2a4cdc283560c1426e6be61e48ed4f1c41f54d30",
+    "after_sha256": "3ee949532fb4fe7cb9b740dfd37b2a1dc696c6bb383e7adc9c9a280b8b72a6bf",
+    "additions": 65,
+    "deletions": 0,
+    "source_sha": "328b7134378927f2d20dea80bfc295cdf9d00f25",
+    "validation_run": 42565270170,
+    "applied": false
+  },
+  "reset": {
+    "target": "users",
+    "visible_parent_documents": 28,
+    "scope": "root SW users collection and all descendant documents",
+    "preserve": [
+      "staff",
+      "classes",
+      "config",
+      "cohorts",
+      "public_users",
+      "Firebase Authentication accounts"
+    ],
+    "applied": false
+  },
+  "production": {
+    "publisher_base": "912dffc2c619a0f94a4189140bb28926a0598b26",
+    "existing_SW_source": "98c678d544497827bfc05212ea975614b6ba1d31",
+    "published": false
+  }
+}

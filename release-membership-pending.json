@@ -1,0 +1,16 @@
+{
+  "repository": "englishmath75/pico-lab-classroom",
+  "source_sha": "328b7134378927f2d20dea80bfc295cdf9d00f25",
+  "mode": "integrated",
+  "validation_run": 42565270170,
+  "rules_approved": false,
+  "rules_approval_status": "PENDING_USER_APPROVAL",
+  "baseline_source_sha": "c38e7ce5e057b68898d086dde1caaaceae4f6d00",
+  "baseline_publisher_sha": "17162105ba32ac5075017115901800cb298068a0",
+  "rules_approval_record": "release-approval-membership-20261109.json",
+  "rules_sha256": "3ee949532fb4fe7cb9b740dfd37b2a1dc696c6bb383e7adc9c9a280b8b72a6bf",
+  "previous_source_sha": "98c678d544497827bfc05212ea975614b6ba1d31",
+  "previous_publisher_sha": "912dffc2c619a0f94a4189140bb28926a0598b26",
+  "previous_validation_run": 42536561532,
+  "release_note": "SW member change requests/review, cancel/reapply/unblock, ten separate free code slots; reset SW disposable test records only after action-time approval. Preserve MK/commercial/classroom content and teacher configuration."
+}
