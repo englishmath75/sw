@@ -1,16 +1,16 @@
 {
   "repository": "englishmath75/pico-lab-classroom",
-  "source_sha": "98c678d544497827bfc05212ea975614b6ba1d31",
+  "source_sha": "328b7134378927f2d20dea80bfc295cdf9d00f25",
   "mode": "integrated",
-  "validation_run": 42536561532,
+  "validation_run": 42565270170,
   "rules_approved": true,
   "rules_approval_status": "APPROVED_BY_USER_AND_APPLIED",
   "baseline_source_sha": "c38e7ce5e057b68898d086dde1caaaceae4f6d00",
   "baseline_publisher_sha": "17162105ba32ac5075017115901800cb298068a0",
-  "rules_approval_record": "release-approval-enrollment-20261109.json",
-  "rules_sha256": "dda6ec21249d899fbcca4d1d71905b411b493821c7769edb2fdd724c956c8eb5",
-  "previous_source_sha": "6e97466e7bfb44783de7753c5b0e9ba1022d2afc",
-  "previous_publisher_sha": "c1c12e57bd61f166b58c2fdb7662c07e50eaf218",
-  "previous_validation_run": 42522331581,
-  "release_note": "SW mandatory school, actual grade/class and real-name enrollment; retire legacy test approvals, pending teacher approval, unchanged teacher scope and protected sites."
+  "rules_approval_record": "release-approval-membership-20261109.json",
+  "rules_sha256": "3ee949532fb4fe7cb9b740dfd37b2a1dc696c6bb383e7adc9c9a280b8b72a6bf",
+  "previous_source_sha": "98c678d544497827bfc05212ea975614b6ba1d31",
+  "previous_publisher_sha": "912dffc2c619a0f94a4189140bb28926a0598b26",
+  "previous_validation_run": 42536561532,
+  "release_note": "SW membership review/cancel/reapply/unblock and ten free code slots. Firebase rules published with explicit user approval. No production data deleted."
 }

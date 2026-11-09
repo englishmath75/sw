@@ -1,0 +1,17 @@
+{
+  "project": "englishmath-python-classroom",
+  "applied": true,
+  "source_sha": "328b7134378927f2d20dea80bfc295cdf9d00f25",
+  "rules_sha256": "3ee949532fb4fe7cb9b740dfd37b2a1dc696c6bb383e7adc9c9a280b8b72a6bf",
+  "previous_rules_sha256": "68441c8d2197ac98c8550ffa2a4cdc283560c1426e6be61e48ed4f1c41f54d30",
+  "rules_file": "sw/security/membership-proposed.rules",
+  "applied_at": "2026-11-09T05:20:22.129Z",
+  "method": "Firebase Console school administrator; published version visible; after reload full editor clipboard exactly equals approved 52220-character rules",
+  "authorization": "User explicitly approved rules publication and deployment in this conversation.",
+  "scope": "65 additions, 0 deletions; SW membership transitions only; existing MK and personal rules retained.",
+  "data_reset": {
+    "applied": false,
+    "reason": "This approval covers rules publication and deployment. No records deleted."
+  },
+  "validation_run": 42565270170
+}
