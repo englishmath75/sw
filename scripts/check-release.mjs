@@ -5,8 +5,10 @@ if(release.repository!=='englishmath75/pico-lab-classroom'||!/^[a-f0-9]{40}$/.te
 if(!['integrated','baseline'].includes(release.mode)||release.rules_approved!==true)throw Error('Release approval record is missing');
 const run=JSON.parse(execFileSync('gh',['api','repos/'+release.repository+'/actions/runs/'+release.validation_run],{encoding:'utf8'}));
 const validations={'.github/workflows/sw-v2-validation.yml':'work/sw-v2-unified-20261106','.github/workflows/sw-integrated-validation.yml':'work/sw-integrated-20261107','.github/workflows/sw-membership-validation.yml':'work/sw-membership-codes-20261109'};
+validations['.github/workflows/sw-library-validation.yml']='work/sw-library-resume-20261109';
+const libraryFix=run.path==='.github/workflows/sw-library-validation.yml';
 if(validations[run.path]!==run.head_branch||run.conclusion!=='success')throw Error('Pinned source lacks successful SW validation');
-if(['.github/workflows/sw-integrated-validation.yml','.github/workflows/sw-membership-validation.yml'].includes(run.path)){
+if(libraryFix||['.github/workflows/sw-integrated-validation.yml','.github/workflows/sw-membership-validation.yml'].includes(run.path)){
  if(release.rules_approval_status!=='APPROVED_BY_USER_AND_APPLIED'||!/^release-approval-[\w-]+\.json$/.test(release.rules_approval_record||''))throw Error('Integrated rules application record required');
  const proof=JSON.parse(await readFile(release.rules_approval_record,'utf8'));
  if(proof.project!=='englishmath-python-classroom'||proof.applied!==true||proof.rules_sha256!==release.rules_sha256||!/^([a-f0-9]{40})$/.test(proof.source_sha||'')||!proof.applied_at)throw Error('Rules application evidence is missing or invalid');
@@ -15,9 +17,9 @@ if(['.github/workflows/sw-integrated-validation.yml','.github/workflows/sw-membe
   // A previously applied rules receipt remains valid only for a strictly verified
   // descendant that changes these UI/test/docs paths, never Firebase security rules.
   const compare=JSON.parse(execFileSync('gh',['api','repos/'+release.repository+'/compare/'+proof.source_sha+'...'+release.source_sha],{encoding:'utf8'}));
-  const allowed=new Set(['sw/src/app.js','sw/src/cloud.js','sw/src/styles.css','sw/shell.html','sw/tests/integration-accounts.mjs','sw/TEACHER_GUIDE.md']);
+  const allowed=libraryFix?new Set(['sw/src/registry.js','sw/tests/store.test.mjs','sw/tests/library-browser.mjs','.github/workflows/sw-library-validation.yml']):new Set(['sw/src/app.js','sw/src/cloud.js','sw/src/styles.css','sw/shell.html','sw/tests/integration-accounts.mjs','sw/TEACHER_GUIDE.md']);
   if(compare.status!=='ahead'||!Array.isArray(compare.files)||compare.files.length===0||
-     compare.files.some(f=>!allowed.has(f.filename)||f.status!=='modified')||
+     compare.files.some(f=>!allowed.has(f.filename)||!(libraryFix?['added','modified']:['modified']).includes(f.status))||
      compare.total_commits>30)throw Error('Pinned source changed files outside the approved UI-only release scope; new Firebase rules review required');
   console.log('Approved Firebase rules are unchanged; UI-only descendant verified against '+proof.source_sha);
  }
