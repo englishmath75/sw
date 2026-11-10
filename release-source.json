@@ -1,16 +1,16 @@
 {
   "repository": "englishmath75/pico-lab-classroom",
-  "source_sha": "7775b2f86abec93289316ec751683098c6d11069",
+  "source_sha": "09de344cf895209adb1c48ec37d99cebf65aab27",
   "mode": "integrated",
-  "validation_run": 42924194720,
+  "validation_run": 42926707641,
   "rules_approved": true,
   "rules_approval_status": "APPROVED_BY_USER_AND_APPLIED",
   "baseline_source_sha": "c38e7ce5e057b68898d086dde1caaaceae4f6d00",
   "baseline_publisher_sha": "17162105ba32ac5075017115901800cb298068a0",
   "rules_approval_record": "release-approval-membership-20261109.json",
   "rules_sha256": "3ee949532fb4fe7cb9b740dfd37b2a1dc696c6bb383e7adc9c9a280b8b72a6bf",
-  "previous_source_sha": "552929759b2d10bed7e636b0b201c7764bbaf6c3",
-  "previous_publisher_sha": "61e3fd0e51632f0ab9d0daa436b286c6c1a0f8fe",
-  "previous_validation_run": 42568813828,
-  "release_note": "Add pandas first introduction: Excel and NumPy background; Series creation, indexing, slicing, add/update/delete, arithmetic and label alignment; 29 runnable examples and 12 quizzes. Preserve production account and Firebase rules."
+  "previous_source_sha": "7775b2f86abec93289316ec751683098c6d11069",
+  "previous_publisher_sha": "9320ac3b6493a6523724a431cb07e44787b416da",
+  "previous_validation_run": 42924194720,
+  "release_note": "Replace lesson 1 with the full pandas Series introduction under 02 lessons; remove standalone sidebar entry; preserve lessons 2–10 and old-link compatibility."
 }
