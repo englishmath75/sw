@@ -1,16 +1,16 @@
 {
   "repository": "englishmath75/pico-lab-classroom",
-  "source_sha": "552929759b2d10bed7e636b0b201c7764bbaf6c3",
+  "source_sha": "7775b2f86abec93289316ec751683098c6d11069",
   "mode": "integrated",
-  "validation_run": 42568813828,
+  "validation_run": 42924194720,
   "rules_approved": true,
   "rules_approval_status": "APPROVED_BY_USER_AND_APPLIED",
   "baseline_source_sha": "c38e7ce5e057b68898d086dde1caaaceae4f6d00",
   "baseline_publisher_sha": "17162105ba32ac5075017115901800cb298068a0",
   "rules_approval_record": "release-approval-membership-20261109.json",
   "rules_sha256": "3ee949532fb4fe7cb9b740dfd37b2a1dc696c6bb383e7adc9c9a280b8b72a6bf",
-  "previous_source_sha": "328b7134378927f2d20dea80bfc295cdf9d00f25",
-  "previous_publisher_sha": "2c1bad66dc226d889144408777953adc4171e3f3",
-  "previous_validation_run": 42565270170,
-  "release_note": "Fix library resume: saved lesson-00 through lesson-10 code opens the exact editable workspace with its saved title. Lesson answers retain course navigation. Firebase rules, production records, membership features and other sites unchanged."
+  "previous_source_sha": "552929759b2d10bed7e636b0b201c7764bbaf6c3",
+  "previous_publisher_sha": "61e3fd0e51632f0ab9d0daa436b286c6c1a0f8fe",
+  "previous_validation_run": 42568813828,
+  "release_note": "Add pandas first introduction: Excel and NumPy background; Series creation, indexing, slicing, add/update/delete, arithmetic and label alignment; 29 runnable examples and 12 quizzes. Preserve production account and Firebase rules."
 }

@@ -6,6 +6,7 @@ if(!['integrated','baseline'].includes(release.mode)||release.rules_approved!==t
 const run=JSON.parse(execFileSync('gh',['api','repos/'+release.repository+'/actions/runs/'+release.validation_run],{encoding:'utf8'}));
 const validations={'.github/workflows/sw-v2-validation.yml':'work/sw-v2-unified-20261106','.github/workflows/sw-integrated-validation.yml':'work/sw-integrated-20261107','.github/workflows/sw-membership-validation.yml':'work/sw-membership-codes-20261109'};
 validations['.github/workflows/sw-library-validation.yml']='work/sw-library-resume-20261109';
+validations['.github/workflows/sw-pandas-intro-validation.yml']='work/pandas-first-lesson-20261111';
 const libraryFix=run.path==='.github/workflows/sw-library-validation.yml';
 if(validations[run.path]!==run.head_branch||run.conclusion!=='success')throw Error('Pinned source lacks successful SW validation');
 if(libraryFix||['.github/workflows/sw-integrated-validation.yml','.github/workflows/sw-membership-validation.yml'].includes(run.path)){
@@ -23,6 +24,20 @@ if(libraryFix||['.github/workflows/sw-integrated-validation.yml','.github/workfl
      compare.total_commits>30)throw Error('Pinned source changed files outside the approved UI-only release scope; new Firebase rules review required');
   console.log('Approved Firebase rules are unchanged; UI-only descendant verified against '+proof.source_sha);
  }
+}
+// Content-only first-lesson releases must descend from the already validated
+// production version and may change only this finite lesson/navigation/test set.
+if(run.path==='.github/workflows/sw-pandas-intro-validation.yml'){
+ const baseline='552929759b2d10bed7e636b0b201c7764bbaf6c3';
+ const prior=JSON.parse(execFileSync('gh',['api','repos/'+release.repository+'/actions/runs/42568813828'],{encoding:'utf8'}));
+ if(prior.head_sha!==baseline||prior.conclusion!=='success'||prior.path!=='.github/workflows/sw-library-validation.yml')throw Error('Previously validated content baseline unavailable');
+ if(release.mode!=='integrated'||release.rules_approval_status!=='APPROVED_BY_USER_AND_APPLIED'||release.rules_approval_record!=='release-approval-membership-20261109.json')throw Error('Existing applied rules receipt required');
+ const proof=JSON.parse(await readFile(release.rules_approval_record,'utf8'));
+ if(proof.project!=='englishmath-python-classroom'||proof.applied!==true||proof.rules_sha256!==release.rules_sha256||release.rules_sha256!=='3ee949532fb4fe7cb9b740dfd37b2a1dc696c6bb383e7adc9c9a280b8b72a6bf'||!proof.applied_at)throw Error('Existing rules evidence differs');
+ const allowed=new Set(['sw/src/registry.js','sw/shell.html','sw/legacy-transform.mjs','.github/workflows/sw-pandas-intro-validation.yml','public/pandas-data-lab/pandas-intro.html','public/pandas-data-lab/pandas-intro.css','public/pandas-data-lab/pandas-intro.js','public/pandas-data-lab/pandas-intro-examples.json','scripts/pandas-intro/build.py','scripts/pandas-intro/verify.py','scripts/pandas-intro/browser.mjs']);
+ const diff=JSON.parse(execFileSync('gh',['api','repos/'+release.repository+'/compare/'+baseline+'...'+release.source_sha],{encoding:'utf8'}));
+ if(diff.status!=='ahead'||diff.total_commits>30||!diff.files?.length||diff.files.some(f=>!allowed.has(f.filename)||!['added','modified'].includes(f.status)))throw Error('Series lesson release changed files outside its reviewed content scope');
+ console.log('Series lesson only: security rules and authentication source are unchanged from the validated production baseline');
 }
 if(release.mode==='integrated'&&run.head_sha!==release.source_sha)throw Error('Validation SHA differs from source pin');
 if(release.mode==='baseline'){
