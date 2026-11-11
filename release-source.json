@@ -1,16 +1,16 @@
 {
   "repository": "englishmath75/pico-lab-classroom",
-  "source_sha": "eab21e2d6586369edb0e53caf3353f04efbf7403",
+  "source_sha": "746bdcb3f9b923ce0b50f895488f8317694003cb",
   "mode": "integrated",
-  "validation_run": 42934349190,
+  "validation_run": 42941501112,
   "rules_approved": true,
   "rules_approval_status": "APPROVED_BY_USER_AND_APPLIED",
   "baseline_source_sha": "c38e7ce5e057b68898d086dde1caaaceae4f6d00",
   "baseline_publisher_sha": "17162105ba32ac5075017115901800cb298068a0",
   "rules_approval_record": "release-approval-membership-20261109.json",
   "rules_sha256": "3ee949532fb4fe7cb9b740dfd37b2a1dc696c6bb383e7adc9c9a280b8b72a6bf",
-  "previous_source_sha": "e80fe5c464fbf7e5901792a5459de58a2f314b2a",
-  "previous_publisher_sha": "133c0bf73db9771d6ca3dddf7cad71dfb81fcb10",
-  "previous_validation_run": 42931223906,
-  "release_note": "Replace section 03 with four-step student lesson: setup, supplied Series examples, 5x3 DataFrame, label/position/slice selection and vector arithmetic."
+  "previous_source_sha": "eab21e2d6586369edb0e53caf3353f04efbf7403",
+  "previous_publisher_sha": "64db170c675c18a118f89e35d9e843b66ad330a6",
+  "previous_validation_run": 42934349190,
+  "release_note": "Focus first lesson on pandas and Excel, replace NumPy content with Python basics, clarify 32 examples and 12 concept/result questions."
 }

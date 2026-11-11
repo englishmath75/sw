@@ -16,10 +16,10 @@ try{
  await p.goto(origin+'/?page=home');await expect(p.locator('#sw-classroom-frame')).toBeVisible();await expect(p.locator('#sw-user')).toHaveText('로그인 전');
  await expect(p.locator('.classroom-unit')).toHaveText('고2 | 소프트웨어와 생활');assert.equal(await p.locator('.classroom-unit').evaluate(x=>getComputedStyle(x).fontSize),'16px');await p.screenshot({path:path.join(dir,'sw-home-desktop.png')});
  await p.locator('[data-route="lesson"]').click();const lesson=p.frameLocator('#sw-classroom-frame');
- if(['09de344cf895209adb1c48ec37d99cebf65aab27','e7edf318d696f1ec6875eaa68037f151271805d3','e80fe5c464fbf7e5901792a5459de58a2f314b2a','eab21e2d6586369edb0e53caf3353f04efbf7403'].includes(expected)){
+ if(['09de344cf895209adb1c48ec37d99cebf65aab27','e7edf318d696f1ec6875eaa68037f151271805d3','e80fe5c464fbf7e5901792a5459de58a2f314b2a','eab21e2d6586369edb0e53caf3353f04efbf7403','746bdcb3f9b923ce0b50f895488f8317694003cb'].includes(expected)){
   await expect(lesson.locator('.lesson-course')).toContainText('1차시 · 판다스 첫 수업 · Series');
   await expect(p.locator('[data-route="pandas-intro"]')).toHaveCount(0);
-  await expect(lesson.locator('.example')).toHaveCount(expected==='eab21e2d6586369edb0e53caf3353f04efbf7403'?32:29);
+  await expect(lesson.locator('.example')).toHaveCount(['eab21e2d6586369edb0e53caf3353f04efbf7403','746bdcb3f9b923ce0b50f895488f8317694003cb'].includes(expected)?32:29);
   await lesson.getByRole('link',{name:/2차시 ·/}).click();await p.waitForURL('**/?page=lesson&lesson=2');
   await expect(lesson.locator('#heroTitle')).toContainText('2차시');
   await lesson.locator('#lessonPicker').evaluate(el=>el.open=true);await lesson.locator('[data-lesson="0"]').click();
