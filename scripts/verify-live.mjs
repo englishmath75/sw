@@ -15,7 +15,17 @@ try{
  if(expected==='c38e7ce5e057b68898d086dde1caaaceae4f6d00'){await p.goto(origin+'/');await expect(p.locator('.classroom-unit')).toHaveText('고2 | 소프트웨어와 생활');await p.goto(origin+'/ai-avatar.html');await expect(p.locator('#animals button')).toHaveCount(8);proof.checks.push('preserved baseline homepage and avatar');proof.status='PASS';}else{
  await p.goto(origin+'/?page=home');await expect(p.locator('#sw-classroom-frame')).toBeVisible();await expect(p.locator('#sw-user')).toHaveText('로그인 전');
  await expect(p.locator('.classroom-unit')).toHaveText('고2 | 소프트웨어와 생활');assert.equal(await p.locator('.classroom-unit').evaluate(x=>getComputedStyle(x).fontSize),'16px');await p.screenshot({path:path.join(dir,'sw-home-desktop.png')});
- await p.locator('[data-route="lesson"]').click();await expect(p.frameLocator('#sw-classroom-frame').locator('#heroTitle')).toContainText('1차시');await p.screenshot({path:path.join(dir,'sw-lesson-desktop.png')});proof.checks.push('home, legacy lesson and common menu');
+ await p.locator('[data-route="lesson"]').click();const lesson=p.frameLocator('#sw-classroom-frame');
+ if(expected==='09de344cf895209adb1c48ec37d99cebf65aab27'){
+  await expect(lesson.locator('.lesson-course')).toContainText('1차시 · 판다스 첫 수업 · Series');
+  await expect(p.locator('[data-route="pandas-intro"]')).toHaveCount(0);
+  await expect(lesson.locator('.example')).toHaveCount(29);
+  await lesson.getByRole('link',{name:/2차시 ·/}).click();await p.waitForURL('**/?page=lesson&lesson=2');
+  await expect(lesson.locator('#heroTitle')).toContainText('2차시');
+  await lesson.locator('#lessonPicker').evaluate(el=>el.open=true);await lesson.locator('[data-lesson="0"]').click();
+  await p.waitForURL('**/?page=lesson&lesson=1');await expect(lesson.locator('#code-1')).toBeVisible();
+  proof.checks.push('Series lesson 1 replaces former lesson; standalone sidebar absent; lesson 2 and return work');
+ }else await expect(lesson.locator('#heroTitle')).toContainText('1차시');await p.screenshot({path:path.join(dir,'sw-lesson-desktop.png')});proof.checks.push('home, legacy lesson and common menu');
  await p.locator('[data-route="data-lab"]').click();await expect(p.locator('.cm-content')).toContainText('import pandas as pd');await expect(p.getByRole('button',{name:/^(한 줄씩 보기|▶ 실제 Python 실행)$/})).toBeVisible({timeout:150000});if(await p.getByRole('button',{name:'한 줄씩 보기',exact:true}).count()){await p.getByRole('button',{name:'한 줄씩 보기',exact:true}).click();await expect(p.getByTestId('data-status')).toContainText('실행 완료',{timeout:150000});await expect(p.getByTestId('trace-stdout')).toHaveText('(출력 없음)');await p.getByRole('button',{name:'마지막',exact:true}).click();await expect(p.getByTestId('trace-stdout')).toContainText('(3, 2)');
  const outputStyle=await p.getByTestId('trace-stdout').evaluate(el=>{const s=getComputedStyle(el);return {color:s.color,background:s.backgroundColor,fontSize:parseFloat(s.fontSize)};});
  const luminance=c=>c.match(/[\d.]+/g).slice(0,3).map(Number).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;}).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
