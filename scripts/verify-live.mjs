@@ -16,7 +16,7 @@ try{
  await p.goto(origin+'/?page=home');await expect(p.locator('#sw-classroom-frame')).toBeVisible();await expect(p.locator('#sw-user')).toHaveText('로그인 전');
  await expect(p.locator('.classroom-unit')).toHaveText('고2 | 소프트웨어와 생활');assert.equal(await p.locator('.classroom-unit').evaluate(x=>getComputedStyle(x).fontSize),'16px');await p.screenshot({path:path.join(dir,'sw-home-desktop.png')});
  await p.locator('[data-route="lesson"]').click();const lesson=p.frameLocator('#sw-classroom-frame');
- if(expected==='09de344cf895209adb1c48ec37d99cebf65aab27'){
+ if(['09de344cf895209adb1c48ec37d99cebf65aab27','e7edf318d696f1ec6875eaa68037f151271805d3'].includes(expected)){
   await expect(lesson.locator('.lesson-course')).toContainText('1차시 · 판다스 첫 수업 · Series');
   await expect(p.locator('[data-route="pandas-intro"]')).toHaveCount(0);
   await expect(lesson.locator('.example')).toHaveCount(29);

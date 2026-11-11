@@ -1,16 +1,16 @@
 {
   "repository": "englishmath75/pico-lab-classroom",
-  "source_sha": "09de344cf895209adb1c48ec37d99cebf65aab27",
+  "source_sha": "e7edf318d696f1ec6875eaa68037f151271805d3",
   "mode": "integrated",
-  "validation_run": 42926707641,
+  "validation_run": 42928895197,
   "rules_approved": true,
   "rules_approval_status": "APPROVED_BY_USER_AND_APPLIED",
   "baseline_source_sha": "c38e7ce5e057b68898d086dde1caaaceae4f6d00",
   "baseline_publisher_sha": "17162105ba32ac5075017115901800cb298068a0",
   "rules_approval_record": "release-approval-membership-20261109.json",
   "rules_sha256": "3ee949532fb4fe7cb9b740dfd37b2a1dc696c6bb383e7adc9c9a280b8b72a6bf",
-  "previous_source_sha": "7775b2f86abec93289316ec751683098c6d11069",
-  "previous_publisher_sha": "9320ac3b6493a6523724a431cb07e44787b416da",
-  "previous_validation_run": 42924194720,
-  "release_note": "Replace lesson 1 with the full pandas Series introduction under 02 lessons; remove standalone sidebar entry; preserve lessons 2–10 and old-link compatibility."
+  "previous_source_sha": "09de344cf895209adb1c48ec37d99cebf65aab27",
+  "previous_publisher_sha": "fb2de897fde50df9bf0efc016716759dc2a97b86",
+  "previous_validation_run": 42926707641,
+  "release_note": "Student-facing Series lesson: shorten yellow Excel note; remove all teacher read-aloud panels and teacher pacing guidance."
 }
