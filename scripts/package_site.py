@@ -120,7 +120,8 @@ def package(dist, source_sha):
     if integrated:
         weather_link = '<a class="nav" href="/changwon-weather.html">창원 기온 분석 · 실습 영상</a>'
         text = re.sub(r'(<a\\b[^>]*data-route="data"[^>]*>.*?</a>)', lambda m: m[0] + weather_link, text, count=1, flags=re.S)
-        (dist / 'changwon-weather.html').write_text("""<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>창원 기온 분석 실습</title><style>body{font:18px/1.7 system-ui;max-width:52rem;margin:3rem auto;padding:0 1rem;color:#163748}iframe{width:100%;aspect-ratio:16/9;border:0}a{color:#075487}</style><a href="/?page=data">← SW 교실 실습 자료</a><h1>창원 6월 기온 분석</h1><p>학교 Google 계정으로 로그인한 뒤 학생용 자료의 압축을 풀고 VS Code에서 폴더를 열어 주세요.</p><p><a href="https://drive.google.com/file/d/1p4h_VyITToD1U5dTGfwhn9I6iLozMYdA/view">학생용 실습 자료 (ZIP)</a> · <a href="https://drive.google.com/file/d/1YYtQ89wifZVbKRHcyZOxS9OLG5WhkE4N/view">Drive에서 영상 열기</a></p><iframe title="창원 기온 분석 전체 실습 영상" src="https://drive.google.com/file/d/1YYtQ89wifZVbKRHcyZOxS9OLG5WhkE4N/preview" allowfullscreen></iframe><p>02:24 CSV 내려받기 · 04:09 VS Code 준비 · 12:06 결측치 실습 · 20:33 그래프 그리기 · 24:01 표와 그림 저장</p></html>""", encoding='utf-8')
+        guide = Path(__file__).resolve().parents[1] / 'lessons' / 'changwon-weather.html'
+        shutil.copyfile(guide, dist / 'changwon-weather.html')
     root.write_text(text)
     (dist / '.nojekyll').touch()
     (dist / 'site-version.json').write_text(json.dumps({'source_repository': 'englishmath75/pico-lab-classroom', 'source_sha': source_sha}, indent=2))
