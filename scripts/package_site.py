@@ -122,6 +122,19 @@ def package(dist, source_sha):
         text = re.sub(r'(<a\\b[^>]*data-route="data"[^>]*>.*?</a>)', lambda m: m[0] + weather_link, text, count=1, flags=re.S)
         guide = Path(__file__).resolve().parents[1] / 'lessons' / 'changwon-weather.html'
         shutil.copyfile(guide, dist / 'changwon-weather.html')
+        data_frame = dist / 'sw-content' / 'index.html'
+        frame_html = data_frame.read_text(encoding='utf-8')
+        snack_card = r'(<section\\b[^>]*\\bid="data"[^>]*>\\s*)<div class="panel"><h3>처음부터 끝까지 · 축제 간식 분석</h3>.*?</div>'
+        weather_card = ('<div class="panel"><h3>창원 기온 데이터 분석</h3>'
+                        '<p>기상청에서 2024년 6월 창원 기온 CSV를 내려받고, VS Code에서 '
+                        '결측치 처리부터 기간별 기온 그래프 그리기까지 실습합니다.</p>'
+                        '<a class="btn primary" href="/changwon-weather.html" target="_top">'
+                        '영상과 단계별 실습 보기 →</a></div>')
+        frame_html, count = re.subn(snack_card, lambda match: match[1] + weather_card,
+                                    frame_html, count=1, flags=re.S)
+        if count != 1:
+            raise ValueError('Expected first practice materials card in SW content')
+        data_frame.write_text(frame_html, encoding='utf-8')
     root.write_text(text)
     (dist / '.nojekyll').touch()
     (dist / 'site-version.json').write_text(json.dumps({'source_repository': 'englishmath75/pico-lab-classroom', 'source_sha': source_sha}, indent=2))
