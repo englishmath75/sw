@@ -133,6 +133,10 @@ def apply_student_curriculum_visibility(dist):
         if ('data-sw-integrated="2"' not in text and
                 'classroom-page' not in text and page.parent.name != 'sw-content'):
             continue
+        # sw-content also contains HTML fragments such as avatar license notices.
+        # They inherit their containing document and have no document head.
+        if '</head>' not in text:
+            continue
         if text.count('</head>') != 1:
             raise ValueError(f'Expected one classroom document head: {page}')
         text = StudentNavigationVisibility(text).apply()
