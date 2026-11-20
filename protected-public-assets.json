@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-09T04:52:22.328Z",
+  "at": "2026-11-20T17:11:39.195035+00:00",
   "operation": "anonymous public read only",
   "sites": [
     {
@@ -8,6 +8,10 @@
         {
           "url": "https://mk.englishmath.kr/app.js",
           "sha256": "58bb92f70dbd500477dffbca2e7d45dce1577ad6b880ed8655baa88c19dce5cb"
+        },
+        {
+          "url": "https://mk.englishmath.kr/brand/englishmath-brand.css?v=20261121",
+          "sha256": "9c30f7e44c8bb5296bbe24c59044ced02fa7f9421cf42817c94036e845950dcd"
         },
         {
           "url": "https://mk.englishmath.kr/mk.css",
@@ -64,5 +68,6 @@
         }
       ]
     }
-  ]
+  ],
+  "review": "Added the already deployed MK logo-only stylesheet after inspection. All previously protected MK and PY asset hashes are unchanged. MK and SW serve the same approved PY logo (SHA256 f067e265b5545fb7cd3e803d0ed4baa5bb1dca22c9032ec51b9ab6d43fb5e85c). No comparison rules were changed."
 }
