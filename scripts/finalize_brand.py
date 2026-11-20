@@ -4,7 +4,9 @@ import html
 import json
 import re
 import time
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import parse_qs, urlsplit
 from urllib.request import Request, urlopen
 
 LABEL = '고2 | 소프트웨어와 생활'
@@ -54,6 +56,112 @@ def verify_avatar(text):
 SW_MOBILE_LAYOUT_FIX = "\n/* Mobile course menu fix, packaged on the pinned SW release only.\n   The open nav must be a single vertical flow: a two-column nav with\n   two-column group children caused four narrow text columns on phones. */\n@media (max-width: 900px) {\n  .sw-shell .side.sw-menu-open > nav {\n    display: block !important;\n    width: 100%;\n    min-width: 0;\n  }\n  .sw-shell .side .sw-menu-group {\n    display: block;\n    width: 100%;\n    min-width: 0;\n    margin: 12px 0 0;\n    padding: 12px 0 0;\n  }\n  .sw-shell .side .sw-menu-group h2 {\n    font-size: 15px;\n    line-height: 1.5;\n    margin: 0 0 8px;\n  }\n  .sw-shell .side .sw-menu-items {\n    display: grid;\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n    gap: 7px;\n    min-width: 0;\n  }\n  .sw-shell .side .sw-menu-items > .nav {\n    display: flex;\n    justify-content: flex-start;\n    align-items: center;\n    min-width: 0;\n    min-height: 44px;\n    width: 100%;\n    margin: 0;\n    padding: 10px 12px;\n    font-size: 15px;\n    line-height: 1.55;\n    text-align: left;\n    white-space: normal !important;\n    word-break: keep-all;\n    overflow-wrap: break-word;\n    border-radius: 10px;\n  }\n  .sw-shell .side .nav.avatar-nav {\n    display: flex;\n    flex-wrap: wrap;\n    width: 100%;\n    min-width: 0;\n    margin: 10px 0 6px;\n    padding: 12px;\n    line-height: 1.5;\n    white-space: normal !important;\n    word-break: keep-all;\n    text-align: center;\n  }\n  .sw-shell .side .brand.brand-mk-aligned .classroom-name,\n  .sw-shell .side .brand.brand-mk-aligned .classroom-unit,\n  .sw-shell .side .brand.brand-mk-aligned .classroom-subject {\n    max-width: 100%;\n    white-space: normal !important;\n    word-break: keep-all;\n    overflow-wrap: break-word;\n  }\n  .sw-shell .side .brand.brand-mk-aligned .classroom-subject {\n    font-size: 13px;\n    line-height: 1.55;\n    text-align: center;\n  }\n  .sw-shell .sw-main {\n    width: 100%;\n    min-width: 0;\n    padding: 14px !important;\n  }\n  .sw-shell .sw-account {\n    min-width: 0;\n    gap: 9px;\n  }\n  .sw-shell .sw-account > button,\n  .sw-shell .sw-account > .btn {\n    max-width: 100%;\n    min-height: 44px;\n    white-space: normal;\n  }\n}\n@media (max-width: 600px) {\n  .sw-shell .side {\n    padding: 14px 16px 16px;\n  }\n  .sw-shell .side .brand.brand-mk-aligned {\n    padding-bottom: 12px;\n    margin: 0 0 8px;\n  }\n  .sw-shell .side .brand.brand-mk-aligned img {\n    width: 88px;\n    max-width: 88px;\n    margin: 0 auto 6px;\n  }\n  .sw-shell .side .brand.brand-mk-aligned .classroom-name {\n    font-size: clamp(19px, 5.5vw, 23px);\n    line-height: 1.35;\n    margin: 2px 0;\n  }\n  .sw-shell .side .brand.brand-mk-aligned .classroom-unit {\n    font-size: 16px !important;\n    line-height: 1.45;\n    margin: 2px 0;\n  }\n  .sw-shell .side .brand.brand-mk-aligned .classroom-subject {\n    font-size: 12px;\n  }\n  .sw-shell .side #sw-mobile-menu {\n    width: 100%;\n    min-height: 48px;\n    margin: 12px 0 0;\n    font-size: 16px;\n  }\n  .sw-shell .side .sw-menu-items {\n    grid-template-columns: minmax(0, 1fr) !important;\n    gap: 6px;\n  }\n  .sw-shell .side .sw-menu-items > .nav {\n    font-size: 16px;\n    padding: 11px 14px;\n  }\n  .sw-shell .side .nav.avatar-nav {\n    justify-content: center;\n    gap: 8px;\n  }\n  .sw-shell .sw-main {\n    padding: 12px !important;\n  }\n  .sw-shell .sw-account {\n    padding: 12px;\n  }\n}\n"
 MOBILE_STYLE_VERSION = '20261107-mobile-menu-fix1'
 
+# Student navigation only: keep archived pages, routes and saved work intact.
+HIDDEN_STUDENT_ROUTES = frozenset(('exam', 'report', 'first-analysis'))
+CURRICULUM_VERSION = '20261121-exam-focus'
+CURRICULUM_STYLE = '''<style id="sw-curriculum-visibility">
+[data-sw-curriculum-hidden],
+[data-route="exam"],[data-route="report"],[data-route="first-analysis"],
+[data-page="exam"],[data-page="report"],[data-page="first-analysis"],
+a[href$="first-analysis.html"],a[href*="first-analysis.html?"],
+a[href*="first-analysis.html#"],#firstAnalysisBridge{display:none!important}
+.sw-home-route{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:600px){.sw-home-route{grid-template-columns:1fr}}
+</style>'''
+
+
+class StudentNavigationVisibility(HTMLParser):
+    """Mark exact internal destinations without touching similarly named routes."""
+
+    def __init__(self, source):
+        super().__init__(convert_charrefs=False)
+        self.source = source
+        self.offsets = [0]
+        for line in source.splitlines(keepends=True):
+            self.offsets.append(self.offsets[-1] + len(line))
+        self.edits = []
+
+    def handle_starttag(self, tag, attributes):
+        attrs = dict(attributes)
+        hidden = attrs.get('id') == 'firstAnalysisBridge'
+        if tag in ('a', 'button'):
+            hidden = hidden or any(attrs.get(key) in HIDDEN_STUDENT_ROUTES
+                                   for key in ('data-route', 'data-page'))
+            if tag == 'a' and attrs.get('href'):
+                target = urlsplit(attrs['href'])
+                if target.netloc in ('', 'sw.englishmath.kr'):
+                    page = parse_qs(target.query).get('page', [''])[0]
+                    hidden = hidden or page in HIDDEN_STUDENT_ROUTES
+                    hidden = hidden or target.path.rsplit('/', 1)[-1] == 'first-analysis.html'
+        if not hidden or 'data-sw-curriculum-hidden' in attrs:
+            return
+        raw = self.get_starttag_text()
+        replacement = raw[:-1] + (' hidden' if 'hidden' not in attrs else '')
+        replacement += ' data-sw-curriculum-hidden="true">'
+        line, column = self.getpos()
+        start = self.offsets[line - 1] + column
+        self.edits.append((start, start + len(raw), replacement))
+
+    def apply(self):
+        self.feed(self.source)
+        text = self.source
+        for start, end, replacement in reversed(self.edits):
+            text = text[:start] + replacement + text[end:]
+        return text
+
+
+def apply_student_curriculum_visibility(dist):
+    """Hide exam-excluded navigation in the SW shell and embedded lesson pages."""
+    if not (dist / 'sw-assets' / 'site.css').is_file():
+        return
+    steps = dist / 'step-by-step.js'
+    if steps.is_file():
+        script = steps.read_text(encoding='utf-8')
+        for jump in ("window.SWPage.navigate('./first-analysis.html')",
+                     "location.href='./first-analysis.html'"):
+            script = script.replace("else if(which===0){" + jump + ";return;}", '')
+        script = script.replace("which===0?'전체 과정 따라 하기 →':", '')
+        script = script.replace(
+            '10차시 실습 완료 · 확인 문제를 풀고 탐구 보고서를 작성하세요.',
+            '10차시 실습 완료 · 학습한 내용을 정리하고 필요한 차시를 다시 확인하세요.')
+        # New filename prevents old cached navigation code from surviving the release.
+        (dist / ('step-by-step.' + CURRICULUM_VERSION + '.js')).write_text(
+            script, encoding='utf-8')
+    count = 0
+    for page in dist.rglob('*.html'):
+        text = page.read_text(encoding='utf-8')
+        if ('data-sw-integrated="2"' not in text and
+                'classroom-page' not in text and page.parent.name != 'sw-content'):
+            continue
+        if text.count('</head>') != 1:
+            raise ValueError(f'Expected one classroom document head: {page}')
+        text = StudentNavigationVisibility(text).apply()
+        text = text.replace(
+            '1차시 → 전체 과정 따라 하기(추가 1회) → 2~10차시 순서로 진행합니다.',
+            '1차시부터 10차시까지 순서대로 진행합니다.')
+        if steps.is_file():
+            text = re.sub(r'(?<=/)step-by-step\.js(?=[?"\'])',
+                          'step-by-step.' + CURRICULUM_VERSION + '.js', text)
+        text = re.sub(r'<style id="sw-curriculum-visibility">.*?</style>',
+                      '', text, flags=re.S)
+        text = text.replace('</head>', CURRICULUM_STYLE + '</head>', 1)
+        page.write_text(text, encoding='utf-8')
+        count += 1
+    if count < 3:
+        raise ValueError(f'Expected SW shell and lesson pages; found {count}')
+    print(f'PACKAGED exam-focused student navigation on {count} SW documents', flush=True)
+
+
+def verify_student_navigation(text):
+    if 'data-sw-integrated="2"' not in text:
+        return
+    if 'id="sw-curriculum-visibility"' not in text:
+        raise ValueError('Exam-focused student navigation is not publicly available')
+    for route in HIDDEN_STUDENT_ROUTES:
+        matches = re.findall(r'<a\b[^>]*data-route="' + route + r'"[^>]*>', text)
+        if len(matches) != 1 or 'data-sw-curriculum-hidden="true"' not in matches[0]:
+            raise ValueError(f'Excluded student navigation remains: {route}')
+
 
 def apply_sw_mobile_layout(dist):
     """Load a separate, versioned mobile stylesheet after existing SW styles."""
@@ -83,6 +191,7 @@ def finalize(dist, source_sha):
     dist = Path(dist)
     verify_css((dist / 'classroom-brand.css').read_text(encoding='utf-8'))
     apply_sw_mobile_layout(dist)
+    apply_student_curriculum_visibility(dist)
     for name in ('index.html', 'step-by-step.html', 'ai-avatar.html'):
         path = dist / name
         text = path.read_text(encoding='utf-8')
@@ -130,6 +239,7 @@ def verify_live(source_sha):
                     raise ValueError(f'{route}: new sidebar label is not publicly available')
                 if 'classroom-brand.css?v=' + source_sha[:12] not in text:
                     raise ValueError(f'{route}: outdated stylesheet link')
+                verify_student_navigation(text)
                 entry = {'url': PUBLIC + route, 'label': LABEL, 'desktop_font_px': 16}
                 if route == 'ai-avatar.html':
                     verify_avatar(text)
@@ -155,3 +265,4 @@ if __name__ == '__main__':
         verify_live(args.source_sha)
     else:
         finalize(args.dist, args.source_sha)
+
