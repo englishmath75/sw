@@ -1,0 +1,12 @@
+/* Original PY logo: fixed colors and proportions, centered on a white panel. */
+.classroom-page .side .brand img.englishmath-brand-logo,
+.side .brand img.englishmath-brand-logo {
+ display:block!important;box-sizing:border-box;width:220px!important;max-width:100%!important;
+ height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center;
+ margin:0 auto 10px!important;padding:12px 10px!important;background:#fff!important;
+ border:1px solid #e7e1d6!important;border-radius:12px!important;
+}
+@media(max-width:900px){
+ .classroom-page .side .brand img.englishmath-brand-logo,
+ .side .brand img.englishmath-brand-logo {width:200px!important;}
+}

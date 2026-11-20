@@ -1,4 +1,5 @@
 """Finalize the SW-only sidebar label and verify the public deployment."""
+from apply_shared_brand import apply_shared_brand
 import argparse
 import html
 import json
@@ -217,6 +218,8 @@ def finalize(dist, source_sha):
             text = text.replace('</head>', TRACE_STYLE + '</head>')
         path.write_text(text, encoding='utf-8')
         print(f'PACKAGED {name}: {LABEL}; desktop=16px; css={source_sha[:12]}', flush=True)
+
+    apply_shared_brand(dist)
 
 
 def fetch(path, source_sha):
